@@ -1,0 +1,69 @@
+
+
+set echo on
+set linesize 1000
+set pagesize 300
+set trimspool on
+
+exec adm_support.set_start(2671, 'ONCOR-JIRA1846_SecondaryBreaker_Add_Columns');
+spool c:\temp\2671-20180702-ONCOR-JIRA1846_SecondaryBreaker_Add_Columns.log
+--**************************************************************************************
+--SCRIPT NAME: 2671-20180702-ONCOR-JIRA1846_SecondaryBreaker_Add_Columns.sql
+--**************************************************************************************
+-- AUTHOR			: INGRNET\PVKURELL
+-- DATE				: 02-JUL-2018
+-- CYCLE			: 00.03.07
+-- JIRA NUMBER		: 1846
+-- PRODUCT VERSION	: 10.3
+-- PRJ IDENTIFIER	: G/TECHNOLOGY - ONCOR
+-- PROGRAM DESC		: Add columns to Secondary Breaker attribute component
+-- SOURCE DATABASE	:
+--**************************************************************************************
+
+---***Add columns to Secondary Breaker component table***
+Alter Table B$SECBREAKER_N Add TYPE_C 		 VARCHAR2(30);
+Alter Table B$SECBREAKER_N Add MODEL_NM		 VARCHAR2(30);
+Alter Table B$SECBREAKER_N Add POT_TRIP_COIL VARCHAR2(30);
+
+
+execute CREATE_VIEWS.CREATE_LTT_VIEW('B$SECBREAKER_N');
+execute CREATE_TRIGGERS.CREATE_LTT_TRIGGER('B$SECBREAKER_N');
+
+---***Add columns to Secondary Breaker Attribute Cmponent ****
+insert into G3E_ATTRIBUTE(G3E_ANO,G3E_CNO,G3E_VNO,G3E_FIELD,G3E_USERNAME,G3E_FORMAT,G3E_REQUIRED,G3E_TOOLTIP,G3E_HYPERTEXT,G3E_PNO,G3E_COPY,G3E_EXCLUDEFROMEDIT,G3E_DATATYPE,G3E_EXCLUDEFROMREPLACE,G3E_BREAKCOPY,G3E_COPYATTRIBUTE,G3E_WRAPTEXT,G3E_FUNCTIONALVALIDATION,G3E_UNIQUE,G3E_EDITDATE)  Values(1540206,15402,NULL,'TYPE_C','Breaker Type',NULL,0,'Breaker Type',0,NULL,0,0,10,0,0,0,1,1,0,sysdate);
+insert into G3E_ATTRIBUTE(G3E_ANO,G3E_CNO,G3E_VNO,G3E_FIELD,G3E_USERNAME,G3E_FORMAT,G3E_REQUIRED,G3E_TOOLTIP,G3E_HYPERTEXT,G3E_PNO,G3E_COPY,G3E_EXCLUDEFROMEDIT,G3E_DATATYPE,G3E_EXCLUDEFROMREPLACE,G3E_BREAKCOPY,G3E_COPYATTRIBUTE,G3E_WRAPTEXT,G3E_FUNCTIONALVALIDATION,G3E_UNIQUE,G3E_EDITDATE)  Values(1540207,15402,NULL,'MODEL_NM','Model',NULL,0,'Model',0,NULL,0,1,10,0,0,0,0,1,0,sysdate);
+insert into G3E_ATTRIBUTE(G3E_ANO,G3E_CNO,G3E_VNO,G3E_FIELD,G3E_USERNAME,G3E_FORMAT,G3E_REQUIRED,G3E_TOOLTIP,G3E_HYPERTEXT,G3E_PNO,G3E_COPY,G3E_EXCLUDEFROMEDIT,G3E_DATATYPE,G3E_EXCLUDEFROMREPLACE,G3E_BREAKCOPY,G3E_COPYATTRIBUTE,G3E_WRAPTEXT,G3E_FUNCTIONALVALIDATION,G3E_UNIQUE,G3E_EDITDATE)  Values(1540208,15402,NULL,'POT_TRIP_COIL','Potential Trip Coil',NULL,0,'Potential Trip Coil',0,NULL,0,0,10,0,0,0,1,1,0,sysdate);
+
+
+---***Add Attributes to Dialog Tab****
+
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_READONLY,G3E_DTNO) values (15430108,1540206,70,0,154301);
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_READONLY,G3E_DTNO) values (15420108,1540206,70,0,154201);
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_READONLY,G3E_DTNO) values (15410108,1540206,70,1,154101);
+
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_READONLY,G3E_DTNO) values (15430109,1540207,80,0,154301);
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_READONLY,G3E_DTNO) values (15420109,1540207,80,0,154201);
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_READONLY,G3E_DTNO) values (15410109,1540207,80,1,154101);
+
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_READONLY,G3E_DTNO) values (15430110,1540208,90,0,154301);
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_READONLY,G3E_DTNO) values (15420110,1540208,90,0,154201);
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_READONLY,G3E_DTNO) values (15410110,1540208,90,1,154101);
+
+
+commit;
+
+---***Execute Packages****
+execute MG3ElanguageSubTableUtils.SynchronizeSubTables;
+execute MG3EOTCreateOptimizedTables;
+execute MG3ECreateOptableViews;
+
+execute GDOTRIGGERS.CREATE_GDOTRIGGERS; 
+execute G3E_DynamicProcedures.Generate;
+
+
+--**************************************************************************************
+-- End Script Body
+--**************************************************************************************
+spool off;
+exec adm_support.set_finish(2671);
+

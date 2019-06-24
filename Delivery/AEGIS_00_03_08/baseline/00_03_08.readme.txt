@@ -1,0 +1,63 @@
+------------------------------------------------
+AEGIS SYSTEM RELEASE NOTES
+------------------------------------------------
+version:    00.03.08
+delivered:  03-AUG-2018
+author:     Anthony Lowther (Hexagon)
+------------------------------------------------
+
+CONTENTS:
+
+  * Assemblies/GT_Assemblies  -- Custom DLLs, to be copied to a central location for client use
+
+  * Assemblies/IAS_Assemblies -- Binaries specific to the IAS (e.g.- GIS Automation components)
+
+  * Scripts                   -- Database scripts containing changes with respect to the previous release and patches
+
+------------------------------------------------
+
+ISSUES ADDRESSED:
+
+  See accompanying spreadsheet.
+
+------------------------------------------------
+
+KNOWN ISSUES:
+
+  1) ALM 679 -- Phase Validation errors that can't be resolved
+       This release includes fixes for most of the phase validation errors previously encountered, but investigation is continuing
+       for a different scenario that occurred during release testing.  If further fixes are necessary they will be provided in
+       a subsequent patch, or else if investigation turns up a different cause then we will notify that the issue actually was
+       resolved in this release.
+
+------------------------------------------------
+
+INSTRUCTIONS:
+
+  1) Use all provided DLLs in the "Assemblies/GT_Assemblies" folder to replace the previously delivered client versions.
+
+  2) Use all provided binaries in the "Assemblies/IAS_Assemblies" folder to update components running on the Integration Application Server.
+
+  3) Run scripts:
+
+     a) Connect as the GIS user:
+        1) Run the script "00-run_all_scripts_GIS.sql", which will in turn execute all other scripts with "GIS" in the prefix.
+        2) Log files are created in the C:\Temp folder; verify whether any errors occurred during script execution.
+        3) Perform a manual COMMIT.
+
+     b) Connect as the GIS_ONC user:
+        1) Run the script "00-run_all_scripts_GISONC.sql", which will in turn execute all other scripts with "GISONC" in the prefix.
+        2) Log files are created in the C:\Temp folder; verify whether any errors occurred during script execution.
+        3) Perform a manual COMMIT.
+
+     c) Connect as the SYS user:
+        1) Run the script "00-run_all_scripts_SYS.sql", which will in turn execute all other scripts with "SYS" in the prefix.
+        2) Log files are created in the C:\Temp folder; verify whether any errors occurred during script execution.
+        3) Perform a manual COMMIT.
+
+  4) Publish METADATA.
+
+  5) There is NO NEED to Publish DATA.  
+
+------------------------------------------------
+------------------------------------------------

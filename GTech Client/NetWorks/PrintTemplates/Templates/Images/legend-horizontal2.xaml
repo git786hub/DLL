@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This file is compatible with Silverlight-->
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Name="svg829" Width="720" Height="200">
+  <Canvas.Resources/>
+  <!--Unknown tag: metadata-->
+  <!--Unknown tag: sodipodi:namedview-->
+  <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="32" FontWeight="Normal" FontFamily="sans-serif" FontStyle="normal" Foreground="#FF000000" Canvas.Left="184.11459" Canvas.Top="65.3" Name="text9760"/>
+  <Canvas Name="g1932">
+    <Canvas.RenderTransform>
+      <TranslateTransform X="2.6847587" Y="-9.811947"/>
+    </Canvas.RenderTransform>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="18.66666603" FontWeight="Normal" FontFamily="sans-serif" FontStyle="normal" Foreground="#FF000000" Canvas.Left="49.412754" Canvas.Top="6.8" Name="text9732">
+      <Span xml:space="preserve" Foreground="#FFEE092A" FontSize="18.66666603" FontWeight="Normal" FontFamily="AEGIS Structure" FontStyle="normal">@</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="127.04469" Canvas.Top="9.5" Name="text9736">
+      <Span xml:space="preserve" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal">Substation</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="14.66666698" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="1.6536458" Canvas.Top="37.5" Name="text46052">
+      <Span xml:space="preserve" FontSize="14.66666698">Primary Conductors:</Span>
+    </TextBlock>
+    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path7814" StrokeThickness="2" Stroke="#FF000000" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" Data="M 6.877608 68.61806 H 106.87759"/>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="127.03166" Canvas.Top="58.7" Name="text9700">
+      <Span xml:space="preserve" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal">3 phase</Span>
+    </TextBlock>
+    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path9598" StrokeThickness="2" Stroke="#FF000000" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" Data="m 6.877685 88.204639 h 25"/>
+    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path95988" StrokeThickness="2" Stroke="#FF000000" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" Data="m 41.877523 88.204639 h 10"/>
+    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path959881" StrokeThickness="2" Stroke="#FF000000" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" Data="m 61.877523 88.204639 h 10"/>
+    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path95981" StrokeThickness="2" Stroke="#FF000000" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" Data="M 81.877523 88.204639 H 106.87752"/>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="127.07074" Canvas.Top="78.3" Name="text9704">
+      <Span xml:space="preserve" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal">2 phase</Span>
+    </TextBlock>
+    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path78149" StrokeThickness="2" Stroke="#FF000000" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" Data="m 6.877633 107.79122 h 35"/>
+    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path781498" StrokeThickness="2" Stroke="#FF000000" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" Data="m 51.877577 107.79122 h 10"/>
+    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path781496" StrokeThickness="2" Stroke="#FF000000" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" Data="M 71.877577 107.79122 H 106.87757"/>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="126.30902" Canvas.Top="97.9" Name="text9708">
+      <Span xml:space="preserve" FontSize="13.33333302">1 phase</Span>
+    </TextBlock>
+    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path78142" StrokeThickness="2" Stroke="#FFF90000" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" Data="M 6.877603 125.92272 H 106.8776"/>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="126.81683" Canvas.Top="117.4" Name="text9712">
+      <Span xml:space="preserve" FontSize="13.33333302">Mainline</Span>
+    </TextBlock>
+    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path78145" Fill="#FF6600FF" StrokeThickness="2" Stroke="#FF2A1FA2" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" Data="M 6.877608 142.59914 H 106.87759"/>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="126.81683" Canvas.Top="134.1" Name="text9716">
+      <Span xml:space="preserve" FontSize="13.33333302">Non-mainline</Span>
+    </TextBlock>
+    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path781492" StrokeThickness="2" Stroke="#FF8F3A12" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" Data="M 6.877608 160.76646 H 106.87759"/>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="126.96005" Canvas.Top="150.8" Name="text9720">
+      <Span xml:space="preserve" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal">Underground</Span>
+    </TextBlock>
+    <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path7814927" StrokeThickness="2" Stroke="#FF91C020" StrokeMiterLimit="4" StrokeLineJoin="Miter" StrokeStartLineCap="Flat" StrokeEndLineCap="Flat" Data="M 6.877603 186.68411 H 106.8776"/>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="127.37021" Canvas.Top="170.6" Name="text9724">
+      <Span xml:space="preserve" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal">Other feeder</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="126.90146" Canvas.Top="183" Name="text9980">
+      <Span xml:space="preserve" FontSize="13.33333302">primary</Span>
+    </TextBlock>
+  </Canvas>
+  <Canvas Name="g5319">
+    <Canvas.RenderTransform>
+      <TranslateTransform X="334.15269" Y="-215.77252"/>
+    </Canvas.RenderTransform>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="14.66666698" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="269.34149" Canvas.Top="213.3" Name="text105918">
+      <Span xml:space="preserve" FontSize="14.66666698">Reclosers:</Span>
+    </TextBlock>
+    <Canvas Name="g5107">
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="311.4342" Canvas.Top="237.4" Name="text1061999">
+        <Span xml:space="preserve" FontSize="13.33333302">open/closed</Span>
+      </TextBlock>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Device" FontStyle="normal" Foreground="#FFFF0000" Canvas.Left="292.0907" Canvas.Top="234.3" Name="text11672">
+        <Span xml:space="preserve" FontSize="24">H</Span>
+      </TextBlock>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Device" FontStyle="normal" Foreground="#FF00FF00" Canvas.Left="271.53812" Canvas.Top="234.3" Name="text1167">
+        <Span xml:space="preserve" FontSize="24">H</Span>
+      </TextBlock>
+    </Canvas>
+    <Canvas Name="g5115">
+      <Canvas.RenderTransform>
+        <TranslateTransform X="0" Y="6.2320658"/>
+      </Canvas.RenderTransform>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="311.94202" Canvas.Top="335.3" Name="text10619994758">
+        <Span xml:space="preserve" FontSize="13.33333302">Voltage</Span>
+      </TextBlock>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="310.83527" Canvas.Top="349.3" Name="text106199947581">
+        <Span xml:space="preserve" FontSize="13.33333302">Regulator</Span>
+      </TextBlock>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="sans-serif" FontStyle="normal" Foreground="#F0000000" Canvas.Left="279.06961" Canvas.Top="339.9" Name="text3572">
+        <Span xml:space="preserve" Foreground="#F0000000" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Device" FontStyle="normal">4</Span>
+      </TextBlock>
+    </Canvas>
+    <Canvas Name="g5123">
+      <Canvas.RenderTransform>
+        <TranslateTransform X="0" Y="6.0404053"/>
+      </Canvas.RenderTransform>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="311.44724" Canvas.Top="304.2" Name="text1061999475">
+        <Span xml:space="preserve" FontSize="13.33333302">Capacitor</Span>
+      </TextBlock>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="310.97849" Canvas.Top="317.1" Name="text10619994750">
+        <Span xml:space="preserve" FontSize="13.33333302">bank</Span>
+      </TextBlock>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Device" FontStyle="normal" Foreground="#FF000000" Canvas.Left="278.01233" Canvas.Top="307.8" Name="text3576">
+        <Span xml:space="preserve" FontSize="24">0</Span>
+      </TextBlock>
+    </Canvas>
+    <Canvas Name="g5135">
+      <Canvas.RenderTransform>
+        <TranslateTransform X="0" Y="1.274353"/>
+      </Canvas.RenderTransform>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="310.95245" Canvas.Top="261.5" Name="text10619994">
+        <Span xml:space="preserve" FontSize="13.33333302">Default</Span>
+      </TextBlock>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Device" FontStyle="normal" Foreground="#FFFF00FF" Canvas.Left="281.81442" Canvas.Top="257" Name="text35763">
+        <Span xml:space="preserve" Foreground="#FFFF00FF" FontSize="24">H</Span>
+      </TextBlock>
+    </Canvas>
+    <Canvas Name="g5129">
+      <Canvas.RenderTransform>
+        <TranslateTransform X="0" Y="2.4602356"/>
+      </Canvas.RenderTransform>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="310.83527" Canvas.Top="283.9" Name="text106199947">
+        <Span xml:space="preserve" FontSize="13.33333302">Fuse</Span>
+      </TextBlock>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Device" FontStyle="normal" Foreground="#FFFF00FF" Canvas.Left="280.54358" Canvas.Top="279.7" Name="text357630">
+        <Span xml:space="preserve" Foreground="#FFFF00FF" FontSize="24">K</Span>
+      </TextBlock>
+    </Canvas>
+  </Canvas>
+  <Canvas Name="g5284">
+    <Canvas.RenderTransform>
+      <TranslateTransform X="344.24318" Y="-215.77252"/>
+    </Canvas.RenderTransform>
+    <Canvas Name="g5181">
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="14.66666698" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="129.68124" Canvas.Top="213.3" Name="text10591">
+        <Span xml:space="preserve" FontSize="14.66666698">Switches:</Span>
+      </TextBlock>
+      <Canvas Name="g5045">
+        <Canvas.RenderTransform>
+          <TranslateTransform X="-6" Y="5.0182545"/>
+        </Canvas.RenderTransform>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="179.23993" Canvas.Top="231.3" Name="text10619">
+          <Span xml:space="preserve" FontSize="13.33333302">Air Switch</Span>
+        </TextBlock>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="178.75815" Canvas.Top="243.5" Name="text106199">
+          <Span xml:space="preserve" FontSize="13.33333302">open/closed</Span>
+        </TextBlock>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Switch" FontStyle="normal" Foreground="#FF80FF5E" Canvas.Left="140.34634" Canvas.Top="232.5" Name="text10595">
+          <Span xml:space="preserve" FontSize="24">A</Span>
+        </TextBlock>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Switch" FontStyle="normal" Foreground="#FFF90000" Canvas.Left="161.65091" Canvas.Top="232.5" Name="text10599">
+          <Span xml:space="preserve" FontSize="24">A</Span>
+        </TextBlock>
+      </Canvas>
+      <Canvas Name="g5055">
+        <Canvas.RenderTransform>
+          <TranslateTransform X="-6" Y="5.9532315"/>
+        </Canvas.RenderTransform>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="178.5954" Canvas.Top="267.6" Name="text10629">
+          <Span xml:space="preserve" FontSize="13.33333302">Solid blade</Span>
+        </TextBlock>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="178.75815" Canvas.Top="280.3" Name="text1061998">
+          <Span xml:space="preserve" FontSize="13.33333302">open/closed</Span>
+        </TextBlock>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Switch" FontStyle="normal" Foreground="#FF80FF5E" Canvas.Left="141.64844" Canvas.Top="269.8" Name="text10603">
+          <Span xml:space="preserve" FontSize="24">J</Span>
+        </TextBlock>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Switch" FontStyle="normal" Foreground="#FFF90000" Canvas.Left="162.953" Canvas.Top="269.8" Name="text10607">
+          <Span xml:space="preserve" FontSize="24">J</Span>
+        </TextBlock>
+      </Canvas>
+      <Canvas Name="g5145">
+        <Canvas.RenderTransform>
+          <TranslateTransform X="-6"/>
+        </Canvas.RenderTransform>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="178.27637" Canvas.Top="349.8" Name="text10637">
+          <Span xml:space="preserve" FontSize="13.33333302">Default</Span>
+        </TextBlock>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Switch" FontStyle="normal" Foreground="#FFDDDDDD" Canvas.Left="151.77536" Canvas.Top="344.8" Name="text105997">
+          <Span xml:space="preserve" FontSize="24">A</Span>
+        </TextBlock>
+      </Canvas>
+      <Canvas Name="g5065">
+        <Canvas.RenderTransform>
+          <TranslateTransform X="-6" Y="3.5965729"/>
+        </Canvas.RenderTransform>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="179.26596" Canvas.Top="304.5" Name="text10633">
+          <Span xml:space="preserve" FontSize="13.33333302">Vacuum/Oil</Span>
+        </TextBlock>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="178.75815" Canvas.Top="317.2" Name="text10619981">
+          <Span xml:space="preserve" FontSize="13.33333302">open/closed</Span>
+        </TextBlock>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Switch" FontStyle="normal" Foreground="#FF80FF5E" Canvas.Left="137.89844" Canvas.Top="308.4" Name="text106034">
+          <Span xml:space="preserve" FontSize="24">I</Span>
+        </TextBlock>
+        <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Switch" FontStyle="normal" Foreground="#FFF90000" Canvas.Left="159.203" Canvas.Top="308.4" Name="text106077">
+          <Span xml:space="preserve" FontSize="24">I</Span>
+        </TextBlock>
+      </Canvas>
+    </Canvas>
+  </Canvas>
+  <Canvas Name="g4943">
+    <Canvas.RenderTransform>
+      <TranslateTransform X="222.56608" Y="-209.85129"/>
+    </Canvas.RenderTransform>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="14.66666698" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="-0.34635419" Canvas.Top="207.3" Name="text4605">
+      <Span xml:space="preserve" FontSize="14.66666698">Poles:</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Structure" FontStyle="normal" Foreground="#FF000000" Canvas.Left="4.0380545" Canvas.Top="231.9" Name="text4744">
+      <Span xml:space="preserve" FontSize="24">A</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Structure" FontStyle="normal" Foreground="#FF000000" Canvas.Left="66.547165" Canvas.Top="231.9" Name="text4756">
+      <Span xml:space="preserve" FontSize="24">D</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="29.328093" Canvas.Top="233.7" Name="text4729">
+      <Span xml:space="preserve" FontSize="13.33333302">30'</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="92.537727" Canvas.Top="233.6" Name="text4713">
+      <Span xml:space="preserve" FontSize="13.33333302">45'</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Structure" FontStyle="normal" Foreground="#FF000000" Canvas.Left="66.491173" Canvas.Top="268" Name="text4760">
+      <Span xml:space="preserve" FontSize="24">E</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Structure" FontStyle="normal" Foreground="#FF000000" Canvas.Left="3.9911795" Canvas.Top="268" Name="text4748">
+      <Span xml:space="preserve" FontSize="24">B</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="91.51429" Canvas.Top="269.7" Name="text4717">
+      <Span xml:space="preserve" FontSize="13.33333302">50'</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="29.281218" Canvas.Top="269.7" Name="text7220">
+      <Span xml:space="preserve" FontSize="13.33333302">35'</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Structure" FontStyle="normal" Foreground="#FF000000" Canvas.Left="3.8974295" Canvas.Top="304" Name="text4752">
+      <Span xml:space="preserve" FontSize="24">C</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="29.897104" Canvas.Top="305.7" Name="text4709">
+      <Span xml:space="preserve" FontSize="13.33333302">40'</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="91.876266" Canvas.Top="305.7" Name="text9740">
+      <Span xml:space="preserve" FontSize="13.33333302">&gt;50'</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Structure" FontStyle="normal" Foreground="#FF000000" Canvas.Left="66.780144" Canvas.Top="304" Name="text47440">
+      <Span xml:space="preserve" FontSize="24">F</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="30.615948" Canvas.Top="375.2" Name="text9974">
+      <Span xml:space="preserve" FontSize="13.33333302">Foreign pole</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Structure" FontStyle="normal" Foreground="#FF000000" Canvas.Left="3.405242" Canvas.Top="374.8" Name="text474403">
+      <Span xml:space="preserve" FontSize="24">G</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="31.572979" Canvas.Top="342" Name="text9744">
+      <Span xml:space="preserve" FontSize="13.33333302">Transmission</Span>
+    </TextBlock>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Structure" FontStyle="normal" Foreground="#FF000000" Canvas.Left="4.1318045" Canvas.Top="340.1" Name="text4744037">
+      <Span xml:space="preserve" FontSize="24">J</Span>
+    </TextBlock>
+  </Canvas>
+  <Canvas Name="g5343">
+    <Canvas.RenderTransform>
+      <TranslateTransform X="350.24133" Y="-215.77252"/>
+    </Canvas.RenderTransform>
+    <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="14.66666698" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="3.2778654" Canvas.Top="213.4" Name="text10453">
+      <Span xml:space="preserve" FontSize="14.66666698">Transformers:</Span>
+    </TextBlock>
+    <Canvas Name="g5023">
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="33.252064" Canvas.Top="277.1" Name="text104572">
+        <Span xml:space="preserve" FontSize="13.33333302">Auto XFMR</Span>
+      </TextBlock>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="29.33333397" FontWeight="Normal" FontFamily="sans-serif" FontStyle="normal" Foreground="#FF000000" Canvas.Left="7.9734068" Canvas.Top="270.8" Name="text3622">
+        <Span xml:space="preserve" FontSize="29.33333397" FontWeight="Normal" FontFamily="AEGIS Transformer" FontStyle="normal">O</Span>
+      </TextBlock>
+    </Canvas>
+    <Canvas Name="g5029">
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="32.288517" Canvas.Top="311.5" Name="text104570">
+        <Span xml:space="preserve" FontSize="13.33333302">Underground</Span>
+      </TextBlock>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="sans-serif" FontStyle="normal" Foreground="#FF000000" Canvas.Left="8.0437193" Canvas.Top="311.2" Name="text36228">
+        <Span xml:space="preserve" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Transformer" FontStyle="normal">H</Span>
+      </TextBlock>
+    </Canvas>
+    <Canvas Name="g5017">
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="32.783314" Canvas.Top="239.8" Name="text10457">
+        <Span xml:space="preserve" FontSize="13.33333302">Overhead</Span>
+      </TextBlock>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="sans-serif" FontStyle="normal" Canvas.Left="8.0437193" Canvas.Top="237.9" Name="text36229">
+        <Span xml:space="preserve" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Transformer" FontStyle="normal">A</Span>
+      </TextBlock>
+    </Canvas>
+    <Canvas Name="g5035">
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="13.33333302" FontWeight="Normal" FontFamily="Segoe UI" FontStyle="normal" Foreground="#FF000000" Canvas.Left="32.171329" Canvas.Top="348" Name="text104574">
+        <Span xml:space="preserve" FontSize="13.33333302">Network</Span>
+      </TextBlock>
+      <TextBlock xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" FontSize="24" FontWeight="Normal" FontFamily="sans-serif" FontStyle="normal" Foreground="#FF000000" Canvas.Left="14.582782" Canvas.Top="346.1" Name="text362289">
+        <Span xml:space="preserve" FontSize="24" FontWeight="Normal" FontFamily="AEGIS Transformer" FontStyle="normal">R</Span>
+      </TextBlock>
+    </Canvas>
+  </Canvas>
+</Canvas>

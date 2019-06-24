@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>fiWorkPointDisplay</name>
+    </assembly>
+    <members>
+        <member name="T:GTechnology.Oncor.CustomAPI.fiWorkPointDisplay">
+            <summary>
+            fiWorkPointDisplay
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.fiWorkPointDisplay.Arguments">
+            <summary>
+            Arguments
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.fiWorkPointDisplay.ComponentName">
+            <summary>
+            ComponentName
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.fiWorkPointDisplay.Components">
+            <summary>
+            Components
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.fiWorkPointDisplay.DataContext">
+            <summary>
+            DataContext
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.fiWorkPointDisplay.FieldName">
+            <summary>
+            FieldName
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.fiWorkPointDisplay.FieldValueBeforeChange">
+            <summary>
+            FieldValueBeforeChange
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.fiWorkPointDisplay.Type">
+            <summary>
+            Type
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.fiWorkPointDisplay.Delete">
+            <summary>
+            Delete
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.fiWorkPointDisplay.Execute">
+            <summary>
+            Execute
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.fiWorkPointDisplay.Validate(System.String[]@,System.String[]@)">
+            <summary>
+            Validate
+            </summary>
+            <param name="ErrorPriorityArray"></param>
+            <param name="ErrorMessageArray"></param>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.fiWorkPointDisplay.WorkPointDisplay(System.Boolean)">
+            <summary>
+            This method runs a query for all Work Point features and attach/detach the results to the display control.
+            </summary>
+            <param name="iDelete">This parameter determines whether the current operation is delete or execute</param>
+        </member>
+    </members>
+</doc>

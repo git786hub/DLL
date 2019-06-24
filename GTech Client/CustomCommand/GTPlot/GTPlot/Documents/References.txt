@@ -1,0 +1,7 @@
+﻿Gtech References required:
+
+C:\Program Files\Intergraph\GTechnology\Program\GTech.Interop.G3E.dll
+C:\Program Files\Intergraph\GTechnology\Program\GTech.Interop.MapView.dll
+C:\Program Files\Intergraph\GTechnology\Program\GTech.Interop.NorthArrow.dll
+C:\Program Files\Intergraph\GTechnology\Program\GTech.Interop.PView.dll
+C:\Program Files\Intergraph\GTechnology\Program\Intergraph.GTechnology.dll

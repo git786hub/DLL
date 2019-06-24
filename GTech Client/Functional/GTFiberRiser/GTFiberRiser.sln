@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTFiberRiser", "GTFiberRiser\GTFiberRiser.csproj", "{DB3CDFA1-BAEB-4EF6-975C-215AEEF94902}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB3CDFA1-BAEB-4EF6-975C-215AEEF94902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3CDFA1-BAEB-4EF6-975C-215AEEF94902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3CDFA1-BAEB-4EF6-975C-215AEEF94902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3CDFA1-BAEB-4EF6-975C-215AEEF94902}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B227D7D7-A8A3-4A37-8ECA-309BCF9F05F6}
+	EndGlobalSection
+EndGlobal

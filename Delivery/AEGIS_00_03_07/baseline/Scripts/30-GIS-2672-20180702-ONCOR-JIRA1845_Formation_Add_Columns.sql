@@ -1,0 +1,102 @@
+
+set echo on
+set linesize 1000
+set pagesize 300
+set trimspool on
+
+exec adm_support.set_start(2672, 'ONCOR-JIRA1845_Formation_Add_Columns');
+spool c:\temp\2672-20180702-ONCOR-JIRA1845_Formation_Add_Columns.log
+--**************************************************************************************
+--SCRIPT NAME: 2672-20180702-ONCOR-JIRA1845_Formation_Add_Columns.sql
+--**************************************************************************************
+-- AUTHOR				: INGRNET\PVKURELL
+-- DATE					: 02-JUL-2018
+-- CYCLE				: 00.03.07
+-- JIRA NUMBER			: 1845
+-- PRODUCT VERSION		: 10.3
+-- PRJ IDENTIFIER		: G/TECHNOLOGY - ONCOR
+-- PROGRAM DESC			: Add columns to FORMATION_N attribute component****
+-- SOURCE DATABASE		:
+--**************************************************************************************
+-- Script Body
+--**************************************************************************************
+
+DROP TABLE VL_FORMATION_DUCT_TYPE;
+CREATE TABLE VL_FORMATION_DUCT_TYPE
+(
+	VL_KEY   	VARCHAR2(10) NOT NULL, 
+	VL_VALUE    VARCHAR2(30),
+	UNUSED      NUMBER(1),    
+	ORDINAL     NUMBER(10)  
+);
+
+DROP TABLE VL_FORMATION_DUCT_SIZE;
+CREATE TABLE VL_FORMATION_DUCT_SIZE
+(
+	VL_KEY    	VARCHAR2(10) NOT NULL, 
+	VL_VALUE    VARCHAR2(30) ,
+	UNUSED      NUMBER(1),    
+	ORDINAL     NUMBER(10)  
+);
+
+Insert into G3E_PICKLIST (G3E_PNO,G3E_USERNAME,G3E_TABLE,G3E_KEYFIELD,G3E_VALUEFIELD,G3E_VALIDATION,G3E_PUBLISH) values (379,'Formation Duct Type','VL_FORMATION_DUCT_TYPE','VL_KEY','VL_VALUE','G3ERestricted',0);
+
+Insert into G3E_PICKLIST (G3E_PNO,G3E_USERNAME,G3E_TABLE,G3E_KEYFIELD,G3E_VALUEFIELD,G3E_VALIDATION,G3E_PUBLISH) values (380,'Formation Duct Size','VL_FORMATION_DUCT_SIZE','VL_KEY','VL_VALUE','G3ERestricted',0);
+
+
+---***Add columns to Formation attribute component****
+
+Alter Table B$FORMATION_N Add DUCT_TYPE_C	VARCHAR2(30) DEFAULT 'PVC'; 
+Alter Table B$FORMATION_N Add DUCT_SIZE_Q	VARCHAR2(4);
+
+
+execute CREATE_VIEWS.CREATE_LTT_VIEW('B$FORMATION_N');
+execute CREATE_TRIGGERS.CREATE_LTT_TRIGGER('B$FORMATION_N');
+
+insert into G3E_ATTRIBUTE(G3E_ANO,G3E_CNO,G3E_VNO,G3E_FIELD,G3E_USERNAME,G3E_FORMAT,G3E_REQUIRED,G3E_TOOLTIP,G3E_HYPERTEXT,G3E_PNO,G3E_COPY,G3E_EXCLUDEFROMEDIT,G3E_DATATYPE,G3E_EXCLUDEFROMREPLACE,G3E_BREAKCOPY,G3E_COPYATTRIBUTE,G3E_WRAPTEXT,G3E_FUNCTIONALVALIDATION,G3E_UNIQUE,G3E_EDITDATE)  Values(240006,2401,null,'DUCT_TYPE_C','Duct Type',null,0,'Duct Type',0,379,0,0,10,0,0,0,1,1,0,sysdate);
+
+insert into G3E_ATTRIBUTE(G3E_ANO,G3E_CNO,G3E_VNO,G3E_FIELD,G3E_USERNAME,G3E_FORMAT,G3E_REQUIRED,G3E_TOOLTIP,G3E_HYPERTEXT,G3E_PNO,G3E_COPY,G3E_EXCLUDEFROMEDIT,G3E_DATATYPE,G3E_EXCLUDEFROMREPLACE,G3E_BREAKCOPY,G3E_COPYATTRIBUTE,G3E_WRAPTEXT,G3E_FUNCTIONALVALIDATION,G3E_UNIQUE,G3E_EDITDATE)  Values(240007,2401,null,'DUCT_SIZE_Q','Duct Size',null,0,'Duct Size',0,380,0,0,10,0,0,0,1,1,0,sysdate);
+
+
+---***Add attributes to Formation Dialog Tab***
+
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_PNO,G3E_DEFAULT,G3E_READONLY,G3E_DTNO) values (24030005,240006,30,379,'PVC',1,240301);
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_PNO,G3E_DEFAULT,G3E_READONLY,G3E_DTNO) values (24020005,240006,30,379,'PVC',1,240201);
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_PNO,G3E_DEFAULT,G3E_READONLY,G3E_DTNO) values (24010005,240006,30,379,null,1,240101);
+
+
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_PNO,G3E_DEFAULT,G3E_READONLY,G3E_DTNO) values (24030006,240007,40,380,null,1,240301);
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_PNO,G3E_DEFAULT,G3E_READONLY,G3E_DTNO) values (24020006,240007,40,380,null,1,240201);
+Insert into G3E_TABATTRIBUTE (G3E_TANO,G3E_ANO,G3E_ORDINAL,G3E_PNO,G3E_DEFAULT,G3E_READONLY,G3E_DTNO) values (24010006,240007,40,380,null,1,240101);
+
+
+Update G3E_TABATTRIBUTE SET G3E_ORDINAL=50  WHERE G3E_ANO=240102;
+Update G3E_TABATTRIBUTE SET G3E_ORDINAL=60  WHERE G3E_ANO=240103;
+
+COMMIT;
+
+---***Create public synonym on picklist and grant privileges***
+
+Create public SYNONYM VL_FORMATION_DUCT_TYPE for VL_FORMATION_DUCT_TYPE;
+Grant Select on VL_FORMATION_DUCT_TYPE to DESIGNER,FINANCE,MARKETING;
+Grant Select,Insert,Update,Delete on VL_FORMATION_DUCT_TYPE to SUPERVISOR,ADMINISTRATOR;
+
+Create public SYNONYM VL_FORMATION_DUCT_SIZE for VL_FORMATION_DUCT_SIZE;
+Grant Select on VL_FORMATION_DUCT_SIZE to DESIGNER,FINANCE,MARKETING;
+Grant Select,Insert,Update,Delete on VL_FORMATION_DUCT_SIZE to SUPERVISOR,ADMINISTRATOR;
+
+---***Execute Packages****
+execute MG3ElanguageSubTableUtils.SynchronizeSubTables;
+execute MG3EOTCreateOptimizedTables;
+execute MG3ECreateOptableViews;
+
+execute GDOTRIGGERS.CREATE_GDOTRIGGERS; 
+execute G3E_DynamicProcedures.Generate;
+
+
+--**************************************************************************************
+-- End Script Body
+--**************************************************************************************
+spool off;
+exec adm_support.set_finish(2672);
+

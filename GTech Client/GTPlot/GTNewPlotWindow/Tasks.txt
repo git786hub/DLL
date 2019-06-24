@@ -1,0 +1,60 @@
+T o D o:
+-Support for Imperial measurements
+-INCORRECT dropdown being used - inherits from parent
+-Sizable Form
+-Persist last used size
+-Persist last Form location
+-Scale Bar – API does not expose this functionality, the user may have to place it themselves. 
+-Add a checkbox: [] Show Plot Boundaries for all users.  If checked it would show all plot boundaries for the currently set Job/Capital Work Order #. or some other solution... requires peer review for better solution.
+-Add a “Print Map Window” dialog allowing users to change the default printer used. (Possibly for each plot with a default set in metadata for each). Support for storing printers will have to be added to the plotting metadata tables and the functionality will have to be added to the Workspace Plots custom command allowing the user to change the default printer for any given plot.
+Add Workspace Plots -Rename button
+
+
+B U G S: Additional items I need to take a look at:
+-When scroll bar present in Boudary Info the DropDownList is shown in the wrong location.
+
+
+D O C U M E N T:
+-Admin Document
+-ER diagram of gt_plot_* tables.
+-Create a document outlining functionality
+-User workflow
+
+
+D O N E:
+Move TableName and ColumnName constants to metadata.
+Get User not Mapped User
+GetDefault Legends for Adhoc Plot
+Use the new DataGRidViewAttributes control for the Adhoc Named Plot attributes
+Change Scale based on what Plot Type, Paper Size and Paper Orientation the user selects.
+Update Legend Overrides if the user changes the legend. Raise CellValueChanged Event to Reset displayed LegendOverrides etc.
+Make Workspace Plots and PlotBoundaryPlacement dialogs children of the G/Tech application instead of the desktop.  At the moment they stay ontop of everything. 
+Add support for ADHOC Plot Boundaries (1/2 day) 
+Add messaging when applying legend overrides
+Implement AutomaticTextField to support the “Update Plot Fields” command if any values in the referencing Plot Boundary changes. (1 day) 
+Store the available scales in metadata and set the default Scale for each Plot Type.  Tasks: Create a new metadata table to store the available scales.   Add a Default_Scale attribute to the existing Plot Type, Paper Size and Paper Orientation metadata table to support setting a default scale. Enhance the Place Work Plan functionality to use the available scales from metadata and have the default Scale dynamically change based on what Plot Type, Paper Size and Paper Orientation the user selects. Enhance the New Plot Window functionality to use the available scales from metadata and have the default Scale dynamically Place rotated Plot Boundaries
+Workspace Plots custom command -Copy function seems to cause problems after being used.  If time permits I will look into this one. 
+Top and bottom of border plots OK, but not the sides, they are missing (Paul: just found out Thursday afternoon about this one, but seems to work fine here) 
+Plots always come out landscape (or maybe it was portrait, Pete can’t remember – I can’t duplicate here, I got 3 of each) 
+Lena reported that Legend Overrides title comes up when nothing under it ie PlotPipeline. Check if no Legend Overrides exist then don’t show group title. 
+Add Detail Plot Boundary placement. (1/2 day) 
+Add support for Detail Plot Boundary (1/2 day) 
+Lena reported that Legend Overrides getting an error for “Construction” 8.5 x 11 Landscape with Plot Legend: LegendOverrides.AddLegendOverrides: Conversion from type ‘DBNull’ to type ‘String’ is not valid.  Working on handling the exception. 
+Lena reported that Legend Overrides are missing for “Location Map” 8.5 x 11 Landscape with Plot Legend. Resolved 
+Lena reported that Legend Overrides are not working for “Construction” 8.5 x 11 Landscape with Plot Legend for Curb/Buildings only. Resolved 
+Add Legend Overrides to metadata. 
+Legend support - We have a good line of site on the plot legends now so next week I’ll finalize presenting the user with a default legend for each plot type with the ability to change it to any other legend (Looks like I maybe able to allow the use to use the active map windows legend).  (2 days) 
+Style substitution – This will be used for overriding the Landbase color. Add a metadata table to define what style substitutions are available for each plot.  Then add a drop down list showing the default for each plot and allow the user to change it. (2 day) 
+Use Hide/Unhide or Legend Filter automation to hide feature on a map window inserted in a plot.  Create a new metadata table to support what gets hidden.  Present the user with a list of default hidden items with the ability to change them for each plot.  I’ll be asking product next week if we are able to use unsupported code to access the Legend Filters until they can expose it to us.  Our other customers also need this functionality so I think we have a good case.  At the moment there are too many limitations in using Hide/Unhide feature automation. (? Day – depends on what solution we can go with) 
+GetTypeDefautlLegend
+GetLNOLegendUsername
+Use set legend
+BuildLegendOverride Table
+Present user with LegendOverride
+Save Style Overrides to collection
+Save Legend Override to collection
+Apply Legend Overrides
+Get Style Substitution
+Apply Style Substitution
+Verrify that a Legend Overrides object exists for the plot before creating it.
+Add new Plot Legends to metadata (Detail and Geo)

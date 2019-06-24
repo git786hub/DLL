@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A561589B-49A0-49DA-A49C-880E6DF93BDE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GTechnology.Oncor.CustomAPI</RootNamespace>
+    <AssemblyName>ccStreetLightAcctEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\assemblies\custom\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\assemblies\custom\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADODB, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\..\assemblies\product\ADODB.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Intergraph.GTechnology, Version=1.0.0.0, Culture=neutral, PublicKeyToken=541aba6d74290186, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\assemblies\product\Intergraph.GTechnology.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ccStreetLightAcctEditor.cs" />
+    <Compile Include="DataAccess\CommonUtil.cs" />
+    <Compile Include="DataAccess\ErrorLog.cs" />
+    <Compile Include="DataAccess\StreetLightActEditorContext.cs" />
+    <Compile Include="DataAccess\StreetLightBoundaryContext.cs" />
+    <Compile Include="DataAccess\ManageNonLocatedSTLTContext.cs" />
+    <Compile Include="DataAccess\StreetLightValueListContext.cs" />
+    <Compile Include="GUI\ErrorMsgLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ErrorMsgLog.Designer.cs">
+      <DependentUpon>ErrorMsgLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\StreetLightBndry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\StreetLightBndry.Designer.cs">
+      <DependentUpon>StreetLightBndry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ManageNonLocatedSTLT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ManageNonLocatedSTLT.Designer.cs">
+      <DependentUpon>ManageNonLocatedSTLT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\StreetLightBoundary.cs" />
+    <Compile Include="Model\LampType.cs" />
+    <Compile Include="Model\LuminaireStyle.cs" />
+    <Compile Include="Model\StreetLightDescription.cs" />
+    <Compile Include="Model\StreetLightNonLocated.cs" />
+    <Compile Include="Model\StreetLightRateCode.cs" />
+    <Compile Include="Model\StreetLightRateSchedule.cs" />
+    <Compile Include="Model\StreetLightOwner.cs" />
+    <Compile Include="Model\Wattage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\StreetLightAccount.cs" />
+    <Compile Include="GUI\StreetLightAccoutEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\StreetLightAccoutEditor.Designer.cs">
+      <DependentUpon>StreetLightAccoutEditor.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\ErrorMsgLog.resx">
+      <DependentUpon>ErrorMsgLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\StreetLightAccoutEditor.resx">
+      <DependentUpon>StreetLightAccoutEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\StreetLightBndry.resx">
+      <DependentUpon>StreetLightBndry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ManageNonLocatedSTLT.resx">
+      <DependentUpon>ManageNonLocatedSTLT.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

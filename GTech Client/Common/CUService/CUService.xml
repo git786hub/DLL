@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CUService</name>
+    </assembly>
+    <members>
+        <member name="F:GTechnology.Oncor.CustomAPI.dlgChangeOut.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.dlgChangeOut.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="F:GTechnology.Oncor.CustomAPI.dlgMCUMoreInfo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.dlgMCUMoreInfo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.dlgMCUMoreInfo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:GTechnology.Oncor.CustomAPI.dlgMoreInfoForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.dlgMoreInfoForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.dlgMoreInfoForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.CUService.KeyObject">
+            <summary>
+            Sets the GTKeyObject in the CUService.
+            </summary>
+            <value>
+            GTKeyobject
+            </value>
+            <returns></returns>
+            <remarks>
+            Contains the feature for which the CU information will be manipulated by this service.
+            </remarks>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.CUService.CompUnitANO">
+            <summary>
+            Returns the G3E_ANO of the Primary CU attribute.
+            </summary>
+            <value>
+            Integer
+            </value>
+            <remarks>
+            None.
+            </remarks>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.CUService.CompUnitMacroANO">
+            <summary>
+            Returns the G3E_ANO of the Primary Macro CU attribute.
+            </summary>
+            <value>
+            Integer
+            </value>
+            <remarks>
+            None.
+            </remarks>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.CUService.AncCompUnitANO">
+            <summary>
+            Returns the G3E_ANO of the Ancillary CU attribute.
+            </summary>
+            <value>
+            Integer
+            </value>
+            <remarks>
+            None.
+            </remarks>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.CUService.AncCompUnitMacroANO">
+            <summary>
+            Returns the G3E_ANO of the Ancillary Macro CU attribute.
+            </summary>
+            <value>
+            Integer
+            </value>
+            <remarks>
+            None.
+            </remarks>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.CUService.CompUnitQtyANO">
+            <summary>
+            Returns the G3E_ANO of the Primary CU Quantity attribute.
+            </summary>
+            <value>
+            Integer
+            </value>
+            <remarks>
+            None.
+            </remarks>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.CUService.AncCompUnitQtyANO">
+            <summary>
+            Returns the G3E_ANO of the Ancillary CU Quantity attribute.
+            </summary>
+            <value>
+            Integer
+            </value>
+            <remarks>
+            None.
+            </remarks>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.CUService.GetPickList(System.Int32)">
+            <summary>
+            The method will return of Picklist table data corresponding to argument iPNO
+            </summary>
+            <param name="iPNO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.CUService.GetKeyValueDataTable(System.Data.DataTable,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{GTechnology.Oncor.CustomAPI.PickiListData}})">
+            <summary>
+            Method to replace the content of DataTable to Value Field of a picklist
+            </summary>
+            <param name="dKeyFieldData"></param>
+            <param name="dicPickList"></param>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.CUService.DeleteCU(System.String,System.Boolean,System.Int32)">
+             <summary>
+             This is the routine that handles the Delete() methods.
+            
+            If the CU component from which the CU is to be removed is optional,
+            any instances of this CU will be deleted.
+            
+            If the CU component from which the CU is to be removed is required
+            and this is not the last instance of this component,
+            then the instance will be deleted.
+            
+            If this is the last instance of a required CU component, the instance will not be deleted;
+            instead, all non-key fields will be set to null.
+            
+            If the CU being deleted is a primary CU,
+            any static attributes associated with this CU will be left as is.
+            
+            If the CU being deleted is a macro CU,
+            then all CUs (both primary and ancillary) associated with the macro will be deleted.
+            
+            If Delete is called and more than one GTKeyObject has been specified,
+            an exception will be raised.
+            
+            If there are no features defined,
+            then nothing will be done and no exception will be raised.
+            
+            If the CU hasn't been defined for the feature defined,
+            then nothing will be done and no exception will be raised.
+            
+            If the CU is successfully deleted, then any auxilliary component records
+            that have a matching G3E_CID to the deleted CU record will also be deleted.
+             </summary>
+             <param name="sCUCode"></param>
+             <param name="bPrimary"></param>
+             <param name="iOccurrence"></param>
+        </member>
+        <member name="T:My.Resources.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:My.Resources.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:My.Resources.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

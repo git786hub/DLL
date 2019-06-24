@@ -1,0 +1,12 @@
+------------------------------------------------------------------------------
+--UPDATE STREETLIGHT ACCOUNT TABLE
+--------------------------------------------------------------------------------
+UPDATE GIS_ONC.STLT_ACCOUNT ACCT
+SET (ACCT.BOUNDARY_CLASS, ACCT.BOUNDARY_ID) = 
+    (SELECT DISTINCT ASSO.BOUNDARY_CLASS,ASSO.BOUNDARY_ID
+    FROM GIS_ONC.STLT_ACCT_BNDY_ASSOC ASSO
+    WHERE ASSO.ACCOUNT_ID = ACCT.ESI_LOCATION)
+WHERE EXISTS 
+    (SELECT 1 
+    FROM GIS_ONC.STLT_ACCT_BNDY_ASSOC ASSO
+    WHERE ACCT.ESI_LOCATION = ASSO.ACCOUNT_ID);

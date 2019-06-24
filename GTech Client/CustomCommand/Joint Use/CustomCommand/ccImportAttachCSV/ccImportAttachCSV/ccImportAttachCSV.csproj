@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24D788DE-235E-40CF-BC9B-BEA6A2291902}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ccImportAttachCSV</RootNamespace>
+    <AssemblyName>ccImportAttachCSV</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\assemblies\custom\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\..\assemblies\custom\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADODB, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\assemblies\product\ADODB.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Intergraph.GTechnology.dll">
+      <HintPath>..\..\..\..\..\..\assemblies\product\Intergraph.GTechnology.dll</HintPath>
+    </Reference>
+    <Reference Include="Intergraph.GTechnology">
+      <HintPath>..\..\..\..\..\..\assemblies\product\Intergraph.GTechnology.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ccImportAttachCSV.cs" />
+    <Compile Include="csGlobals.cs" />
+    <Compile Include="frmAttachCVS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAttachCVS.designer.cs">
+      <DependentUpon>frmAttachCVS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenCsv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenCsv.designer.cs">
+      <DependentUpon>frmOpenCsv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSaveCSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaveCSV.designer.cs">
+      <DependentUpon>frmSaveCSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAttachCVS.resx">
+      <DependentUpon>frmAttachCVS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenCsv.resx">
+      <DependentUpon>frmOpenCsv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSaveCSV.resx">
+      <DependentUpon>frmSaveCSV.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

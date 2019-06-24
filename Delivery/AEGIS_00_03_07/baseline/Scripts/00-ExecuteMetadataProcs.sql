@@ -1,0 +1,29 @@
+SET serveroutput off;
+SET echo ON;
+spool C:\Temp\ExecuteMetadataProcs.log APPEND;
+
+execute dbms_utility.compile_schema('GIS');
+
+execute MG3ElanguageSubTableUtils.SynchronizeSubTables;
+execute MG3EOTCreateOptimizedTables;
+execute MG3ECreateOptableViews;
+EXECUTE LTT_ROLE.CREATE_PUBLIC_SYNONYM;
+EXECUTE LTT_ROLE.CREATE_COMPONENT_VIEW_SYNONYM;
+EXECUTE LTT_ROLE.GRANT_PRIVS_TO_ROLE;
+
+execute LTT_Role.CREATE_ALL_ROLES;
+execute LTT_Role.GRANT_PACKAGE_TO_ROLE;
+execute LTT_ROLE.GRANT_METADATA_TO_ROLE
+execute LTT_ROLE.createsynpicklist;
+execute LTT_ROLE.CREATE_METADATA_SYNONYM;
+
+EXECUTE COMPONENTQUERY.GENERATE;
+EXECUTE COMPONENTVIEWQUERY.GENERATE;
+execute GDOTRIGGERS.CREATE_GDOTRIGGERS;
+EXECUTE G3E_DynamicProcedures.Generate; 
+execute G3E_MANAGEMODLOG.ResetToDatabase;
+EXECUTE STATICPOST.GENERATE;
+
+EXECUTE DBMS_STATS.GATHER_SCHEMA_STATS(ownname => 'GIS');
+
+SPOOL OFF;

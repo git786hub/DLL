@@ -1,0 +1,67 @@
+------------------------------------------------
+AEGIS SYSTEM PATCH NOTES
+------------------------------------------------
+version:    00.03.07
+patchset:   02
+delivered:  27-JUL-2018
+author:     Anthony Lowther (Hexagon)
+------------------------------------------------
+
+ISSUES ADDRESSED:
+
+ * CU Updates
+   (ALM 587  - Incorrect Activity Code When In Corrections Mode)
+   (ALM 521  - P1 Validation Error for Guy Feature - Illegal Repeating Instances Error)
+   (ALM 512  - P1 Validation Error for Guy Feature - Size Attribute Required)
+    
+    Related files:
+       * CommonSetCUStandardAttributes.dll
+       * CUService.dll
+       * fiSetCUStandardAttributes.dll
+       * fiSetDefaultCUActivity.dll
+       * fiSignificantAncillaryCreation.dll
+       * FkqCUSelection.dll
+       * fvAccountingImpact.dll
+       * GIS-03-Setting_G3E_COPY_To_1-MacroCUFields.sql
+
+ * WMIS Request Batch
+   (no ALM issue)
+     
+     Reported that Request batch was missing from the database package. This has already been resolved at ONCOR, but 
+     these are the latest associated master scripts. Previously, the WMIS package was definied
+     in the EdgeFrontier package creation script and the WMIS_WR package script. This update contains the latest 
+     master scripts for GISPKG_WMIS_WR and GISPKG_EF_UTIL.
+     
+     Related files:
+       * GIS-01-GISPKG_WMIS_WR.sql
+       * GIS-02-GISPKG_EF_UTIL.sql
+
+ * Outstanding fixes for Post Job 
+    Updated command metadata to include TransactionAvailable.
+    Fixed issue where function was returning a an incorrect value and causing the command to end prematurely.
+    Added transactional processing.
+    
+     Related files:
+       * ccPostJob.dll
+
+ * Configuration of the Joint Use import command
+     Related files:
+       * GIS-02-SysAccess_CustomCommand.sql
+
+
+
+------------------------------------------------
+------------------------------------------------
+
+INSTRUCTIONS:
+
+  1) Connect to the database as GIS and execute "scripts\run_all_scripts_GIS_ONC.sql".
+  
+  2) Connect to the database as GIS and execute "scripts\run_all_scripts_GIS.sql".
+
+  3) Use all provided DLLs in the "Assemblies" folder to replace the previously delivered versions.
+
+  4) There is NO NEED TO PUBLISH METADATA.  
+
+  5) There is NO NEED TO PUBLISH DATA.  
+

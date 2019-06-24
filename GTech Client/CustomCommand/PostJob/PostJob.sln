@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostJob", "PostJob\PostJob.csproj", "{8196F7A1-42E6-48EC-9CA5-23A3F2F56B22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManager", "..\..\Common\JobManager\JobManager\JobManager.csproj", "{ACDA487A-D5F7-42FA-91DF-78DC3365C2C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomWriteBackLibrary", "..\..\Common\CustomWriteBackLibrary\CustomWriteBackLibrary\CustomWriteBackLibrary.csproj", "{A8A73252-40B1-4B7D-B921-BC10E01DA237}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationRuleOverrides", "..\..\Common\ValidationRuleOverrides\ValidationRuleOverrides\ValidationRuleOverrides.csproj", "{99A126A5-0962-4C0F-90EE-819D0A884489}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendXmlWebMessage", "..\..\Common\SendXmlWebMessage\SendXmlWebMessage\SendXmlWebMessage.csproj", "{7BA97FEA-F60A-422B-A2C7-E325EFF9448C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8196F7A1-42E6-48EC-9CA5-23A3F2F56B22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8196F7A1-42E6-48EC-9CA5-23A3F2F56B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8196F7A1-42E6-48EC-9CA5-23A3F2F56B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8196F7A1-42E6-48EC-9CA5-23A3F2F56B22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACDA487A-D5F7-42FA-91DF-78DC3365C2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACDA487A-D5F7-42FA-91DF-78DC3365C2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACDA487A-D5F7-42FA-91DF-78DC3365C2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACDA487A-D5F7-42FA-91DF-78DC3365C2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8A73252-40B1-4B7D-B921-BC10E01DA237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A73252-40B1-4B7D-B921-BC10E01DA237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A73252-40B1-4B7D-B921-BC10E01DA237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A73252-40B1-4B7D-B921-BC10E01DA237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A126A5-0962-4C0F-90EE-819D0A884489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A126A5-0962-4C0F-90EE-819D0A884489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A126A5-0962-4C0F-90EE-819D0A884489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A126A5-0962-4C0F-90EE-819D0A884489}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BA97FEA-F60A-422B-A2C7-E325EFF9448C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BA97FEA-F60A-422B-A2C7-E325EFF9448C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BA97FEA-F60A-422B-A2C7-E325EFF9448C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BA97FEA-F60A-422B-A2C7-E325EFF9448C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {575D2E75-A095-44D8-B9D9-B923D50BED5D}
+	EndGlobalSection
+EndGlobal

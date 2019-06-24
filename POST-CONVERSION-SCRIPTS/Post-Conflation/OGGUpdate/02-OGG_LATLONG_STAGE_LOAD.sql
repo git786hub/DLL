@@ -1,0 +1,112 @@
+SET ECHO ON
+SET LINESIZE 1000
+SET PAGESIZE 300
+SET TRIMSPOOL ON
+SET SERVEROUTPUT ON
+SPOOL OGG_LATLONG_STAGE_LOAD.LOG 
+
+
+DECLARE
+
+  CURSOR C1
+  IS
+
+    SELECT DISTINCT C.G3E_GEOMETRYFIELD
+      ,F.G3E_FNO
+      ,C.G3E_CNO
+      ,C.G3E_TABLE
+      FROM GIS.G3E_FEATURE F
+      INNER JOIN GIS.G3E_COMPONENT C
+      ON F.G3E_PRIMARYGEOGRAPHICCNO = C.G3E_CNO
+      WHERE 1                       = 1
+        AND C.G3E_GEOMETRYTYPE      = 'OrientedPointGeometry'
+        AND EXISTS
+        (SELECT   1
+          FROM G3E_FEATURECOMPONENT FC
+          WHERE FC.G3E_FNO = F.G3E_FNO
+            AND FC.G3E_CNO = 1
+        )
+      ;
+
+  L_SQL_STR          VARCHAR2 (1000) ;
+  L_FEATURE_CT       NUMBER := 0;
+  L_FEATURE_ERROR_CT NUMBER := 0;
+BEGIN
+  SYS.DBMS_OUTPUT.PUT_LINE (TO_CHAR (SYSTIMESTAMP,'YYYY/MM/DD HH:MI:SS') || '-------------- Started Stage Load -------------- ') ;
+
+  FOR COMP IN C1
+  LOOP
+    BEGIN
+      SYS.DBMS_OUTPUT.PUT_LINE (TO_CHAR (SYSTIMESTAMP,'YYYY/MM/DD HH:MI:SS') || '  ' || TO_CHAR (L_FEATURE_CT + 1) || '------- G3E_TABLE: ' || COMP.G3E_TABLE) ;
+      
+      L_SQL_STR := 'INSERT INTO GIS.OGG_LATLONG_STG_TEMP ( G3E_FNO ,G3E_CNO ,G3E_FID ,G3E_GEOMETRY ,LTT_ID ,LTT_TID ) ' 
+                || ' SELECT G3E_FNO ,G3E_CNO,G3E_FID, ' || COMP.G3E_GEOMETRYFIELD || ' ,LTT_ID' || ' ,LTT_TID' 
+                || ' from GIS.B$' || COMP.G3E_TABLE 
+                || ' where 1 = 1 ' 
+                || ' AND G3E_FNO = ' || TO_CHAR (COMP.G3E_FNO)
+                || ' AND G3E_CNO = ' || TO_CHAR (COMP.G3E_CNO) 
+                || ' AND G3E_cid = 1 ' ;
+      SYS.DBMS_OUTPUT.PUT_LINE (TO_CHAR (SYSTIMESTAMP,'YYYY/MM/DD HH:MI:SS') || '    ' || ' SQL: ' || L_SQL_STR) ;
+      EXECUTE IMMEDIATE L_SQL_STR;
+      SYS.DBMS_OUTPUT.PUT_LINE (TO_CHAR (SYSTIMESTAMP,'YYYY/MM/DD HH:MI:SS') || '    ' || ' ROWS: ' || TO_CHAR ( sql%Rowcount)) ;
+      COMMIT;
+      SYS.DBMS_OUTPUT.PUT_LINE (TO_CHAR (SYSTIMESTAMP,'YYYY/MM/DD HH:MI:SS') || '    ' || ' Update OGG ') ;
+
+      UPDATE GIS.OGG_LATLONG_STG_TEMP OGG
+        SET
+          (
+            OGG.OGGX
+          ,OGG.OGGY
+          )
+          =
+          (SELECT   XY.X OGGX
+            ,XY.Y OGGY
+            FROM TABLE (SDO_UTIL.GETVERTICES (OGG.G3E_GEOMETRY)) XY
+            WHERE 1     = 1
+              AND XY.ID = 1
+          )
+        WHERE G3E_FNO = COMP.G3E_FNO;
+      SYS.DBMS_OUTPUT.PUT_LINE (TO_CHAR (SYSTIMESTAMP,'YYYY/MM/DD HH:MI:SS') || '    ' || ' ROWS: ' || TO_CHAR ( sql%Rowcount)) ;
+
+      SYS.DBMS_OUTPUT.PUT_LINE (TO_CHAR (SYSTIMESTAMP,'YYYY/MM/DD HH:MI:SS') || '    ' || ' Update POINT_GEOMETRY ') ;
+
+      UPDATE GIS.OGG_LATLONG_STG_TEMP OGG
+        SET POINT_GEOMETRY = SDO_CS.TRANSFORM (SDO_GEOMETRY (2001,3082,SDO_POINT_TYPE (OGGX,OGGY,NULL),NULL,NULL),4326)
+        WHERE G3E_FNO      = COMP.G3E_FNO;
+      SYS.DBMS_OUTPUT.PUT_LINE (TO_CHAR (SYSTIMESTAMP,'YYYY/MM/DD HH:MI:SS') || '    ' || ' ROWS: ' || TO_CHAR ( sql%Rowcount)) ;
+
+      SYS.DBMS_OUTPUT.PUT_LINE (TO_CHAR (SYSTIMESTAMP,'YYYY/MM/DD HH:MI:SS') || '    ' || ' Update LAT LNG ') ;
+
+      UPDATE GIS.OGG_LATLONG_STG_TEMP OGG
+        SET LAT       = OGG.POINT_GEOMETRY.SDO_POINT.X
+        ,LNG          = OGG.POINT_GEOMETRY.SDO_POINT.Y
+        WHERE G3E_FNO = COMP.G3E_FNO;
+      SYS.DBMS_OUTPUT.PUT_LINE (TO_CHAR (SYSTIMESTAMP,'YYYY/MM/DD HH:MI:SS') || '    ' || ' ROWS: ' || TO_CHAR ( sql%Rowcount)) ;
+      
+      COMMIT;
+      
+      L_FEATURE_CT := L_FEATURE_CT + 1;
+      
+      SYS.DBMS_OUTPUT.PUT_LINE (TO_CHAR (SYSTIMESTAMP,'YYYY/MM/DD HH:MI:SS') || '   ' || 'COMPLETED G3E_TABLE: ' || COMP.G3E_TABLE) ;
+
+    EXCEPTION
+
+    WHEN OTHERS THEN
+      L_FEATURE_ERROR_CT := L_FEATURE_ERROR_CT + 1;
+      DBMS_OUTPUT.PUT_LINE (TO_CHAR (SYSTIMESTAMP,'YYYY/MM/DD HH:MI:SS') || '  ##ERROR CODE ' || SQLCODE || ' : ' || SUBSTR (SQLERRM,1,64) || ' ') ;
+      DBMS_OUTPUT.PUT ('       ' || DBMS_UTILITY.FORMAT_ERROR_STACK) ;
+      DBMS_OUTPUT.PUT ('       ' || DBMS_UTILITY.FORMAT_ERROR_BACKTRACE) ;
+      CONTINUE;
+
+    END;
+
+  END LOOP;
+  SYS.DBMS_OUTPUT.PUT_LINE (TO_CHAR (SYSTIMESTAMP,'YYYY/MM/DD HH:MI:SS') || ' ------------------- Stage Load Complete ------------------ ') ;
+  DBMS_OUTPUT.PUT_LINE ('----------------Errors: ' || TO_CHAR (L_FEATURE_ERROR_CT)) ;
+  DBMS_OUTPUT.PUT_LINE ('----------------Features Loaded: ' || TO_CHAR (L_FEATURE_CT)) ;
+
+END;
+
+/
+
+SPOOL OFF;

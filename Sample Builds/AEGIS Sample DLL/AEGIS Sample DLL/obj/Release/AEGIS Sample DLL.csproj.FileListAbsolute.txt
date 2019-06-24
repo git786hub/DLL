@@ -1,0 +1,6 @@
+C:\Users\setn\source\repos\AEGIS Sample DLL\AEGIS Sample DLL\bin\Release\AEGIS Sample DLL.dll
+C:\Users\setn\source\repos\AEGIS Sample DLL\AEGIS Sample DLL\bin\Release\AEGIS Sample DLL.pdb
+C:\Users\setn\source\repos\AEGIS Sample DLL\AEGIS Sample DLL\obj\Release\AEGIS Sample DLL.csproj.CoreCompileInputs.cache
+C:\Users\setn\source\repos\AEGIS Sample DLL\AEGIS Sample DLL\obj\Release\AEGIS Sample DLL.dll
+C:\Users\setn\source\repos\AEGIS Sample DLL\AEGIS Sample DLL\obj\Release\AEGIS Sample DLL.pdb
+C:\Users\setn\source\repos\AEGIS Sample DLL\AEGIS Sample DLL\obj\Release\AEGIS Sample DLL.csprojAssemblyReference.cache

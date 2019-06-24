@@ -1,0 +1,15 @@
+@@GIS-01-2693-20180720-ONCOR_JIRA1925_SecondaryCondcutor_Dialog_fix.sql
+@@GIS-02-2692-20180717-ONCOR_JIRA1907_XfmrUG_IsolationPt.sql
+@@GIS-03-2698-20180726-Oncor_JIRA1944_FiberFeatures_Relationship_FIX.sql
+@@GIS-04-2699-20180727-Oncor_JIRA735_SrvcPoint_Remove_Attributes_DialogTab.sql
+@@GIS-05-2702-20180731-Oncor_JIRA1990_PermanentNoteLabel_Set_Repeating.sql
+@@GIS-06-2675-20180704-ONCOR-JIRA1896_SubStnBreaker_Remove_CU_Tabattribute.sql
+@@GIS-07-CoreModel_Feature.sql
+@@GIS-08-SysAccess_CustomCommand.sql
+@@GIS-09-StyleRules_ServicePoint.sql
+@@GIS-10-VL_SERVICEPOINT_TYPE.sql
+@@GIS-11-CoreModel_Connectivity.sql
+@@GIS-12-JobMgmt_CUFKQArguments.sql
+@@GIS-13-CULIB_ATTRIBUTE.sql
+@@GIS-14-2697-20180726-ONCOR-CYCLE6-JIRA-1979_JobStatusFIOridinalUpdate.sql
+@@GIS-15-VL_CU_ACTIVITY_DisplayNames.sql

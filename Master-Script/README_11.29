@@ -1,0 +1,11 @@
+----------------------------------------------------------
+ DEPLOYMENT SCRIPT EXECUTION STEPS -- 11/29/2018
+----------------------------------------------------------
+
+Steps:
+	1 - Execute GIS_STG.Deployment_Script_11.29.sql
+	2 - Execute GIS_ONC.Deployment_Script_11.29.sql
+	
+Notes:
+	* The drop scripts are located at the beginning of each deployment script so they will execute before any objects are created.
+	* The "GIS-ONC-T811-DDL" folder contains objects in both GIS_ONC and GIS_STG. So the paths are correct for the objects in the GIS_STG deployment script.

@@ -1,0 +1,75 @@
+------------------------------------------------
+AEGIS SYSTEM PATCH NOTES
+------------------------------------------------
+version:    00.03.07
+patchset:   01
+delivered:  24-JUL-2018
+author:     Anthony Lowther (Hexagon)
+------------------------------------------------
+
+ISSUES ADDRESSED:
+
+ * Activity Code
+   (ALM 581 - Incorrect Activity Code for MapCo WR/Job Type)
+     
+     Testing of activity codes set in MAPCO WRs has been inhibited by a bug in the WMIS interface which 
+     has been overwriting the Job Type (WR-MAPCOR) with the WR Type (MAPCO). This script contains the 
+     corrected package, which should preserve the Job Type and thus cause the correct activity codes to be used.
+     
+     Related files:
+       * GISONC-01-GISPKG_WMIS_WR.sql.sql
+
+ * Service Center Edits
+   (ALM 672 - Error Message When Connecting A Substation Breaker to A Substation Bus)
+
+     A new attribute edit control was added in 00.03.07 to restrict edits on the Service Center attribute 
+     for Substation Breaker to users with the PRIV_MGMT_SSTA role. This should not prevent the system from 
+     automatically updating the attribute, but the new rule was misconfigured to prevent both interactive 
+     and programmatic updates. This patch reconfigures the interface type so it only restricts updates 
+     via Feature Explorer, and not programmatic updates.
+
+     Related files:
+       * GIS-03-Update_ReadWriteControl_Type.sql
+
+ * CU Library
+   (no ALM issue)
+
+     Based on feedback from the integration team, population of value lists after refreshing the CU library 
+     has been failing for five of the tables due to datatype mismatches. This script alters datatypes for 
+     those five tables in the AEGIS database to accommodate the values arriving from WMIS.
+
+     Related files:
+       * GIS-05-ValueListDatatypeChanges.sql
+
+ * Modification Log
+   (no ALM issue)
+
+     Resynchronizes the modification log to ensure proper display of features whose component views 
+     were altered in 00.03.07 (e.g.- Secondary Conductor, Service Line)
+
+     Related files:
+       * GIS-01-SyncModLogForChangedViews.sql
+
+ * CU Capacitor Typo
+   (no ALM issue)
+
+    Hexagon QA found a metadata typo that caused an error when trying to select a CU for a Capacitor feature.  
+    This script removes the extraneous carriage return character that slipped into the attribute name metadata.
+
+    Related files:
+       * GIS-02-Capacitor_ControlStatusUsername_Update.sql
+
+
+------------------------------------------------
+------------------------------------------------
+
+INSTRUCTIONS:
+
+  1) Connect to the database as GIS_ONC and execute "scripts\run_all_scripts_GIS_ONC.sql".
+
+  2) Connect to the database as GIS and execute "scripts\run_all_scripts_GIS.sql".
+
+  3) Publish METADATA.  
+
+  4) There is NO NEED TO PUBLISH DATA.  
+

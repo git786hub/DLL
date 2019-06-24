@@ -1,0 +1,52 @@
+------------------------------------------------
+AEGIS SYSTEM PATCH NOTES
+------------------------------------------------
+version:    00.03.09
+patchset:   01
+delivered:  05-SEP-2018
+author:     Rich Adase (Hexagon)
+------------------------------------------------
+
+ISSUES ADDRESSED:
+
+ * WMIS Integration
+
+   This fix includes updates to allow testing of the full WR lifecycle:
+    - Centralized updates to the WMIS Status code in the AEGIS Job table within the WMIS batch processing module,
+       for improved reliability; the module will set WMIS_STATUS_C = BATCH as it begins processing for a given WR
+       and then set it to SUCCESS or FAILURE before exiting.
+    - Added exception handler to new job table trigger that parses designer ID, to ensure an exception does not
+       interrupt subsequent processing.
+    - Added a new role PRIV_INTERFACE for shared integration resources, and granted it privileges on the INTERFACE_LOG
+       and INTERFACE_XML_DATA tables in the GIS_STG schema.
+    - Added missing configuration metadata for the Write to WMIS custom command in order to facilitate continued testing.
+
+     Related files:
+       * BatchProcessing.dll
+       * SYS-01-SysAccess_Roles.sql
+       * SYS-02-SysAccess_GrantToRolesAndSchemas.sql
+       * GIS-01-G3E_JOB-DesignerIDTriggers.sql
+       * GIS-02-SysAccess_CustomCommand.sql
+
+------------------------------------------------
+------------------------------------------------
+
+INSTRUCTIONS:
+
+  1) Use all provided DLLs in the "Assemblies/GT_Assemblies" folder to replace the previously delivered client versions.
+
+  2) Run scripts:
+
+     a) Connect as the SYS user:
+        1) Run the script "SYS-01-SysAccess_Roles.sql".
+        2) Run the script "SYS-02-SysAccess_GrantToRolesAndSchemas.sql".
+
+     b) Connect as the GIS user:
+        1) Run the script "GIS-01-G3E_JOB-DesignerIDTriggers.sql".
+        2) Run the script "GIS-02-SysAccess_CustomCommand.sql".
+
+  3) Grant the new role PRIV_INTERFACE to the Oracle user configured for EdgeFrontier (EDGFRONT).
+
+  4) Publish METADATA.  
+
+  5) There is NO NEED TO PUBLISH DATA.  

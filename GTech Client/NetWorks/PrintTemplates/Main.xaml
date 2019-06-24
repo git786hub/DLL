@@ -1,0 +1,25 @@
+﻿<Window x:Class="PrintTemplates.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PrintTemplates"
+        mc:Ignorable="d"
+        Title="Main" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="LandscapeLegend">
+                <local:LandscapeLegendTemplateMock></local:LandscapeLegendTemplateMock>
+            </TabItem>
+            <TabItem Header="LandscapeNoLegend">
+                <local:LandscapeNoLegendTemplateMock></local:LandscapeNoLegendTemplateMock>
+            </TabItem>
+            <TabItem Header="PortraitLegend">
+                <local:PortraitLegendTemplateMock></local:PortraitLegendTemplateMock>
+            </TabItem>
+            <TabItem Header="PortraitNoLegend">
+                <local:PortraitNoLegendTemplateMock></local:PortraitNoLegendTemplateMock>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

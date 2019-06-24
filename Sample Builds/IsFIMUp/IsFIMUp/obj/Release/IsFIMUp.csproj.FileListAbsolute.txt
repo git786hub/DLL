@@ -1,0 +1,12 @@
+C:\Users\setn\source\repos\IsFIMUp\IsFIMUp\bin\Release\IsFIMUp.exe.config
+C:\Users\setn\source\repos\IsFIMUp\IsFIMUp\bin\Release\IsFIMUp.exe
+C:\Users\setn\source\repos\IsFIMUp\IsFIMUp\bin\Release\IsFIMUp.pdb
+C:\Users\setn\source\repos\IsFIMUp\IsFIMUp\bin\Release\AEGIS Sample DLL.dll
+C:\Users\setn\source\repos\IsFIMUp\IsFIMUp\bin\Release\AEGIS Sample DLL.pdb
+C:\Users\setn\source\repos\IsFIMUp\IsFIMUp\obj\Release\IsFIMUp.Form1.resources
+C:\Users\setn\source\repos\IsFIMUp\IsFIMUp\obj\Release\IsFIMUp.Properties.Resources.resources
+C:\Users\setn\source\repos\IsFIMUp\IsFIMUp\obj\Release\IsFIMUp.csproj.GenerateResource.cache
+C:\Users\setn\source\repos\IsFIMUp\IsFIMUp\obj\Release\IsFIMUp.csproj.CoreCompileInputs.cache
+C:\Users\setn\source\repos\IsFIMUp\IsFIMUp\obj\Release\IsFIMUp.csproj.CopyComplete
+C:\Users\setn\source\repos\IsFIMUp\IsFIMUp\obj\Release\IsFIMUp.exe
+C:\Users\setn\source\repos\IsFIMUp\IsFIMUp\obj\Release\IsFIMUp.pdb

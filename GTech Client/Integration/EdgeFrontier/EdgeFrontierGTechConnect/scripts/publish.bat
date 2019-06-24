@@ -1,0 +1,1 @@
+xcopy $(TargetPath) "\\uc-vm-oncor-03\c$\EF_ManagedCode\" /E /Y /I /F

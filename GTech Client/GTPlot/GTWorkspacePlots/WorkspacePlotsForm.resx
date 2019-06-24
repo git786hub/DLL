@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cmdActivate.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank1.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;cmdUnselectAll.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cmdRefresh.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank4.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cmdRename.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ButtonBlank1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmdUnselectAll.Name" xml:space="preserve">
+    <value>cmdUnselectAll</value>
+  </data>
+  <data name="lvNamedPlots.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 371</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lvNamedPlots.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="cmdDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 215</value>
+  </data>
+  <data name="&gt;&gt;cmdOpen.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="cmdRefresh.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="&gt;&gt;PrintDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PrintDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmdMinimize.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="ColumnHeader5.Text" xml:space="preserve">
+    <value>Redlines</value>
+  </data>
+  <data name="cmdRefresh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;cmdRefresh.Name" xml:space="preserve">
+    <value>cmdRefresh</value>
+  </data>
+  <data name="cmdPrint.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cmdCopy.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="ButtonBlank4.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmdRestore.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;cmdClose.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cmdClosePlot.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 41</value>
+  </data>
+  <data name="&gt;&gt;cmdRestore.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmdPrint.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmdRestore.Name" xml:space="preserve">
+    <value>cmdRestore</value>
+  </data>
+  <data name="cmdRefresh.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="cmdOpen.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank3.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="ButtonBlank5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="ButtonBlank2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="cmdRestore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 476</value>
+  </data>
+  <data name="ColumnHeader4.Text" xml:space="preserve">
+    <value>Objects</value>
+  </data>
+  <data name="&gt;&gt;cmdMinimize.Name" xml:space="preserve">
+    <value>cmdMinimize</value>
+  </data>
+  <data name="cmdOpen.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="cmdRefresh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 302</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank2.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="cmdUnselectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 157</value>
+  </data>
+  <data name="&gt;&gt;cmdClose.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmdSelectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;cmdClose.Name" xml:space="preserve">
+    <value>cmdClose</value>
+  </data>
+  <data name="&gt;&gt;cmdMinimize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ColumnHeader3.Text" xml:space="preserve">
+    <value>Maps</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank3.Name" xml:space="preserve">
+    <value>ButtonBlank3</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmdCopy.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 244</value>
+  </data>
+  <data name="cmdClose.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;cmdMaximize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmdClosePlot.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;cmdRename.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmdUnselectAll.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ButtonBlank4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 331</value>
+  </data>
+  <data name="cmdOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;cmdPrint.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmdSelectAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;cmdPrint.Name" xml:space="preserve">
+    <value>cmdPrint</value>
+  </data>
+  <data name="cmdMaximize.Text" xml:space="preserve">
+    <value>Maximize</value>
+  </data>
+  <data name="&gt;&gt;cmdActivate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ButtonBlank5.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="ButtonBlank5.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="cmdMaximize.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;cmdRename.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmdMaximize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;cmdCopy.Name" xml:space="preserve">
+    <value>cmdCopy</value>
+  </data>
+  <data name="&gt;&gt;cmdSelectAll.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank5.Name" xml:space="preserve">
+    <value>ButtonBlank5</value>
+  </data>
+  <data name="ButtonBlank2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="cmdCopy.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="cmdClosePlot.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="cmdOpen.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="cmdNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;lvNamedPlots.Name" xml:space="preserve">
+    <value>lvNamedPlots</value>
+  </data>
+  <data name="&gt;&gt;cmdActivate.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmdSelectAll.Name" xml:space="preserve">
+    <value>cmdSelectAll</value>
+  </data>
+  <data name="cmdNew.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmdOpen.Name" xml:space="preserve">
+    <value>cmdOpen</value>
+  </data>
+  <data name="ColumnHeader1.Width" type="System.Int32, mscorlib">
+    <value>135</value>
+  </data>
+  <data name="&gt;&gt;lvNamedPlots.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="cmdRename.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 447</value>
+  </data>
+  <data name="&gt;&gt;cmdRestore.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank2.Name" xml:space="preserve">
+    <value>ButtonBlank2</value>
+  </data>
+  <data name="cmdCopy.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader5.Name" xml:space="preserve">
+    <value>ColumnHeader5</value>
+  </data>
+  <data name="&gt;&gt;PrintDialog1.Name" xml:space="preserve">
+    <value>PrintDialog1</value>
+  </data>
+  <data name="cmdDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="ButtonBlank1.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;lvNamedPlots.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>WorkspacePlotsForm</value>
+  </data>
+  <data name="&gt;&gt;cmdPrint.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ButtonBlank2.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank1.Name" xml:space="preserve">
+    <value>ButtonBlank1</value>
+  </data>
+  <data name="&gt;&gt;cmdMaximize.Name" xml:space="preserve">
+    <value>cmdMaximize</value>
+  </data>
+  <data name="&gt;&gt;cmdMaximize.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmdPrint.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 70</value>
+  </data>
+  <data name="&gt;&gt;cmdNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>440, 432</value>
+  </data>
+  <data name="&gt;&gt;cmdActivate.Name" xml:space="preserve">
+    <value>cmdActivate</value>
+  </data>
+  <data name="ColumnHeader2.Text" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ButtonBlank1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;cmdMaximize.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ButtonBlank3.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cmdRestore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="ButtonBlank3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;cmdClose.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lvNamedPlots.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="ButtonBlank1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;cmdOpen.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader4.Name" xml:space="preserve">
+    <value>ColumnHeader4</value>
+  </data>
+  <data name="cmdClose.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;cmdDelete.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmdActivate.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;cmdRestore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmdRestore.Text" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="&gt;&gt;cmdSelectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ButtonBlank2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmdSelectAll.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmdUnselectAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmdClose.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank5.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ButtonBlank3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="cmdMinimize.Text" xml:space="preserve">
+    <value>Minimize</value>
+  </data>
+  <data name="&gt;&gt;cmdNew.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmdDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;cmdRefresh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ButtonBlank1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 99</value>
+  </data>
+  <data name="&gt;&gt;cmdDelete.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="cmdUnselectAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="cmdPrint.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ButtonBlank4.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="cmdRefresh.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="cmdMaximize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 418</value>
+  </data>
+  <data name="cmdUnselectAll.Text" xml:space="preserve">
+    <value>Unselect All</value>
+  </data>
+  <data name="&gt;&gt;cmdClosePlot.Name" xml:space="preserve">
+    <value>cmdClosePlot</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmdCopy.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="cmdSelectAll.Text" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="lvNamedPlots.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 12</value>
+  </data>
+  <data name="cmdSelectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="cmdSelectAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 128</value>
+  </data>
+  <data name="&gt;&gt;cmdMinimize.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmdMinimize.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAMAICAQAAAAAADoAgAANgAAACAgAAAAAAAAqAgAAB4DAAAQEBAAAAAAACgBAADGCwAAKAAAACAA
+        AABAAAAAAQAEAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAIAAAACAgACAAAAAgACAAICA
+        AADAwMAAgICAAAAA/wAA/wAAAP//AP8AAAD/AP8A//8AAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        mZmZmZmIiIiIgAAAAAAJmZmZmZmZmYiIiIgAAAAAmZmZmZmZmZmZiIiIAAAAmZmZmZmZmZmZmZiIiAAA
+        CZnZmZmZmZmZmZmZiIAAAJ2dnZ2ZmZmZmZmZmZAAAAnZ2dnZ2ZmZmZmZmZmQAAANnZ2dnZ2ZmZmZmZmZ
+        mQAA2dnZ2dnZ2ZmZmZmZmZmQAJmdnbsAAACZmZmZmZmZkACZ2dubAAAAAAAJmZmZmZAJnZ2dvXgAAAAA
+        AAmZmZmZCdnZ29vbAAAAAAAAmZmZmQmdnZ29sLcAAAAAAAmZmZkJ2dnZ29ALmZAAAAAAmdmZDZ2dnZ2Q
+        AAnZmZmZmZ2d2QnZ2dnZ0AAAmdnZ2dnZ2ZkJnZ2dnZAAAAmdnZ2dnZ2ZCdnZ2dndAAAAmdnZ2dnZkA2d
+        nZ2dnQAAAACZnZ2dnZAA2dnZ2d0AAAAAAAmZmZkAAN3XnZ2dAAAAAAAAAAAAAAANe5vX2ZAAAAAAAAAA
+        AAAADdm3vb29AAAAAAAAAAAAAAB7e9t729AAAAAAAAAAAAAAB7e3t7ewAAAAAAAAAAAAAAB7e3t7ewAA
+        AAAAAAAAAAAAB7e3t7ewAAAAAAAAAAAAAAAHe3t7ewAAAAAAAAAAAAAAAAe3t7iIgAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAP//////8AAB/4AAAP8AAAD8AAAA+AAAAfAAAAfgAAAH4AAAA8AAAAHAAAABwAD4AYAA
+        /gCAAH8AgAAfgIAAA8CAAgAAgAMAAIABgACAAcABgADwAcAA/gPAAH//4AA//+AAH//wAA//+AAH//wA
+        B//+AAf//4AH///gB///////KAAAACAAAABAAAAAAQAIAAAAAACABAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAIAAAIAAAACAgACAAAAAgACAAICAAADAwMAAwNzAAPDKpgAEBAQACAgIAAwMDAAREREAFhYWABwc
+        HAAiIiIAKSkpAFVVVQBNTU0AQkJCADk5OQCAfP8AUFD/AJMA1gD/7MwAxtbvANbn5wCQqa0AAAAzAAAA
+        ZgAAAJkAAADMAAAzAAAAMzMAADNmAAAzmQAAM8wAADP/AABmAAAAZjMAAGZmAABmmQAAZswAAGb/AACZ
+        AAAAmTMAAJlmAACZmQAAmcwAAJn/AADMAAAAzDMAAMxmAADMmQAAzMwAAMz/AAD/ZgAA/5kAAP/MADMA
+        AAAzADMAMwBmADMAmQAzAMwAMwD/ADMzAAAzMzMAMzNmADMzmQAzM8wAMzP/ADNmAAAzZjMAM2ZmADNm
+        mQAzZswAM2b/ADOZAAAzmTMAM5lmADOZmQAzmcwAM5n/ADPMAAAzzDMAM8xmADPMmQAzzMwAM8z/ADP/
+        MwAz/2YAM/+ZADP/zAAz//8AZgAAAGYAMwBmAGYAZgCZAGYAzABmAP8AZjMAAGYzMwBmM2YAZjOZAGYz
+        zABmM/8AZmYAAGZmMwBmZmYAZmaZAGZmzABmmQAAZpkzAGaZZgBmmZkAZpnMAGaZ/wBmzAAAZswzAGbM
+        mQBmzMwAZsz/AGb/AABm/zMAZv+ZAGb/zADMAP8A/wDMAJmZAACZM5kAmQCZAJkAzACZAAAAmTMzAJkA
+        ZgCZM8wAmQD/AJlmAACZZjMAmTNmAJlmmQCZZswAmTP/AJmZMwCZmWYAmZmZAJmZzACZmf8AmcwAAJnM
+        MwBmzGYAmcyZAJnMzACZzP8Amf8AAJn/MwCZzGYAmf+ZAJn/zACZ//8AzAAAAJkAMwDMAGYAzACZAMwA
+        zACZMwAAzDMzAMwzZgDMM5kAzDPMAMwz/wDMZgAAzGYzAJlmZgDMZpkAzGbMAJlm/wDMmQAAzJkzAMyZ
+        ZgDMmZkAzJnMAMyZ/wDMzAAAzMwzAMzMZgDMzJkAzMzMAMzM/wDM/wAAzP8zAJn/ZgDM/5kAzP/MAMz/
+        /wDMADMA/wBmAP8AmQDMMwAA/zMzAP8zZgD/M5kA/zPMAP8z/wD/ZgAA/2YzAMxmZgD/ZpkA/2bMAMxm
+        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
+        AADgHwAA+B8AAA==
+</value>
+  </data>
+  <data name="&gt;&gt;cmdRename.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ButtonBlank3.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonBlank1.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmdUnselectAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="cmdDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="ButtonBlank2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 186</value>
+  </data>
+  <data name="&gt;&gt;cmdNew.Name" xml:space="preserve">
+    <value>cmdNew</value>
+  </data>
+  <data name="cmdOpen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 12</value>
+  </data>
+  <data name="cmdCopy.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;cmdCopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmdPrint.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;cmdCopy.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmdActivate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 418</value>
+  </data>
+  <data name="&gt;&gt;cmdActivate.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cmdRename.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="ButtonBlank4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank4.Name" xml:space="preserve">
+    <value>ButtonBlank4</value>
+  </data>
+  <data name="ColumnHeader1.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader3.Name" xml:space="preserve">
+    <value>ColumnHeader3</value>
+  </data>
+  <data name="&gt;&gt;cmdRefresh.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmdClose.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 360</value>
+  </data>
+  <data name="&gt;&gt;cmdRename.Name" xml:space="preserve">
+    <value>cmdRename</value>
+  </data>
+  <data name="cmdMinimize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="ButtonBlank4.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cmdActivate.Text" xml:space="preserve">
+    <value>Activate</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmdClosePlot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmdPrint.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="cmdRename.Text" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="cmdClosePlot.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="cmdClosePlot.Text" xml:space="preserve">
+    <value>Close Plot</value>
+  </data>
+  <data name="cmdActivate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>480, 394</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Workspace Plots</value>
+  </data>
+  <data name="cmdMinimize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>315, 447</value>
+  </data>
+  <data name="&gt;&gt;lvNamedPlots.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ButtonBlank4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;cmdClosePlot.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="cmdRestore.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonBlank3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 273</value>
+  </data>
+  <data name="cmdMaximize.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ButtonBlank5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>397, 505</value>
+  </data>
+  <data name="&gt;&gt;cmdDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader2.Name" xml:space="preserve">
+    <value>ColumnHeader2</value>
+  </data>
+  <data name="&gt;&gt;cmdOpen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ButtonBlank2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;ColumnHeader1.Name" xml:space="preserve">
+    <value>ColumnHeader1</value>
+  </data>
+  <data name="&gt;&gt;cmdNew.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cmdUnselectAll.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonBlank5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmdNew.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="ButtonBlank3.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="cmdNew.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;cmdClosePlot.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmdDelete.Name" xml:space="preserve">
+    <value>cmdDelete</value>
+  </data>
+  <data name="ButtonBlank5.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;cmdMinimize.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cmdClose.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="cmdNew.Location" type="System.Drawing.Point, System.Drawing">
+    <value>396, 476</value>
+  </data>
+  <data name="cmdDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="cmdRename.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>58</value>
+  </metadata>
+  <metadata name="PrintDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

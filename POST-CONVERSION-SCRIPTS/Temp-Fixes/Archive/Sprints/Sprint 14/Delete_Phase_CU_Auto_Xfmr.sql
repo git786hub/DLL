@@ -1,0 +1,65 @@
+SET ECHO ON
+SET LINESIZE 1000
+SET PAGESIZE 300
+SET TRIMSPOOL ON
+SPOOL DELETE_PHASE_CU_AUTO_XFMR.LOG
+
+CREATE TABLE B$CU_TEMP_TBL
+AS SELECT G3E_FID, G3E_FNO, G3E_CID, CU_C, LTT_ID 
+    FROM GIS.B$COMP_UNIT_N
+    WHERE 1=1 
+        AND G3E_FNO = 34
+        AND G3E_CID > 1
+        AND LTT_ID = 0
+        AND 
+        (
+            CU_C = 'UNK' 
+            OR CU_C = '*' 
+            OR CU_C IS NULL
+        )
+        AND G3E_FID IN 
+        (
+            SELECT DISTINCT G3E_FID 
+            FROM GIS.B$AUTO_XFMR_UNIT_N 
+            WHERE 1=1 
+                AND PHASE_C = 'UNK' 
+                AND LTT_ID = 0
+        );
+        
+ALTER TABLE B$COMP_UNIT_N DISABLE ALL TRIGGERS;
+ALTER TABLE B$AUTO_XFMR_UNIT_N DISABLE ALL TRIGGERS;
+
+DELETE
+FROM GIS.B$COMP_UNIT_N
+    WHERE 1=1 
+        AND G3E_FNO = 34
+        AND G3E_CID > 1
+        AND LTT_ID = 0
+        AND CU_C = 'UNK'
+        AND G3E_FID IN 
+        (
+            SELECT DISTINCT G3E_FID 
+            FROM GIS.B$AUTO_XFMR_UNIT_N 
+            WHERE 1=1 
+                AND PHASE_C = 'UNK' 
+                AND LTT_ID = 0
+        );
+      
+DELETE 
+FROM GIS.B$AUTO_XFMR_UNIT_N
+    WHERE 1=1 
+        AND G3E_CID > 1
+        AND LTT_ID = 0
+        AND PHASE_C = 'UNK'
+        AND G3E_FID IN 
+        (
+            SELECT DISTINCT G3E_FID
+            FROM B$CU_TEMP_TBL
+        );
+COMMIT;
+ALTER TABLE B$COMP_UNIT_N ENABLE ALL TRIGGERS;
+ALTER TABLE B$AUTO_XFMR_UNIT_N ENABLE ALL TRIGGERS;
+
+
+DROP TABLE B$CU_TEMP_TBL;
+SPOOL OFF;

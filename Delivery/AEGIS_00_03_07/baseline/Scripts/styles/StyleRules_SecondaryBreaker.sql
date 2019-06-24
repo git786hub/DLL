@@ -1,0 +1,94 @@
+set echo on
+set linesize 1000
+set pagesize 300
+set trimspool on
+
+spool c:\temp\StyleRules_SecondaryBreaker.log
+--**************************************************************************************
+-- SCRIPT NAME: StyleRules_SecondaryBreaker.sql
+--**************************************************************************************
+-- AUTHOR			    : INGRNET\RRADASE
+-- DATE				    : 10-MAR-2018
+-- PRODUCT VERSION	: 10.3.0
+-- PRJ IDENTIFIER	: G/TECHNOLOGY - ONCOR
+-- PROGRAM DESC		: Styles and style rules for Secondary Breaker
+--**************************************************************************************
+-- Modified:
+--  17-JUL-2018, Rich Adase -- SME symbology review
+--**************************************************************************************
+
+alter trigger M_T_AUDR_G3E_STYLERULE_RULE disable;
+alter trigger M_T_AUD_G3E_STYLERULE_RULE disable;
+
+declare
+  TYPE numArray IS TABLE OF NUMBER INDEX BY PLS_INTEGER;
+  arrSNO  numArray;
+  i       PLS_INTEGER;
+begin
+  select distinct G3E_SNO
+    bulk collect into arrSNO
+    from G3E_STYLERULE 
+    where G3E_RULE in ('Secondary Breaker Detail Symbol', 'Secondary Breaker Detail Symbol - OMS');
+  
+  delete from G3E_STYLERULE where G3E_RULE = 'Secondary Breaker Detail Symbol';
+  delete from G3E_STYLERULE where G3E_RULE = 'Secondary Breaker Detail Symbol - OMS';
+  
+  for i in 1..arrSNO.COUNT loop
+    delete from G3E_POINTSTYLE where G3E_SNO = arrSNO(i);
+    delete from G3E_STYLE where G3E_SNO = arrSNO(i);
+  end loop;
+end;
+/
+
+alter trigger M_T_AUDR_G3E_STYLERULE_RULE enable;
+alter trigger M_T_AUD_G3E_STYLERULE_RULE enable;
+
+-- Point styles
+
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (154101,'Secondary Breaker Detail Symbol - SCADA PPI','AEGIS Device',CHR(83),10158079,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (154102,'Secondary Breaker Detail Symbol - SCADA PPR','AEGIS Device',CHR(83),14540253,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (154103,'Secondary Breaker Detail Symbol - SCADA OSR','AEGIS Device',CHR(83),5921370,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (154104,'Secondary Breaker Detail Symbol - SCADA Open','AEGIS Device',CHR(83),65280,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (154105,'Secondary Breaker Detail Symbol - SCADA Closed','AEGIS Device',CHR(83),255,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (154106,'Secondary Breaker Detail Symbol - SCADA default','AEGIS Device',CHR(83),65535,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (154107,'Secondary Breaker Detail Symbol - PPI','AEGIS Device',CHR(82),10158079,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (154108,'Secondary Breaker Detail Symbol - PPR','AEGIS Device',CHR(82),14540253,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (154109,'Secondary Breaker Detail Symbol - OSR','AEGIS Device',CHR(82),5921370,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (154110,'Secondary Breaker Detail Symbol - Open','AEGIS Device',CHR(82),65280,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (154111,'Secondary Breaker Detail Symbol - Closed','AEGIS Device',CHR(82),255,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (154199,'Secondary Breaker Detail Symbol - default','AEGIS Device',CHR(82),65535,12,0,0,0,null,0,1);
+
+
+-- Style rules - GIS
+
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15410101,154101,'Secondary Breaker Detail Symbol','CAPABLE_YN = ''Y'' and FEATURE_STATE_C in (''PPI'',''ABI'')',1,154101,'Secondary Breaker Detail Symbol - SCADA PPI');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15410102,154101,'Secondary Breaker Detail Symbol','CAPABLE_YN = ''Y'' and FEATURE_STATE_C in (''PPR'',''ABR'',''PPA'',''ABA'')',2,154102,'Secondary Breaker Detail Symbol - SCADA PPR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15410103,154101,'Secondary Breaker Detail Symbol','CAPABLE_YN = ''Y'' and FEATURE_STATE_C in (''OSR'',''OSA'')',3,154103,'Secondary Breaker Detail Symbol - SCADA OSR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15410104,154101,'Secondary Breaker Detail Symbol','CAPABLE_YN = ''Y'' and STATUS_NORMAL_C=''OPEN''',4,154104,'Secondary Breaker Detail Symbol - SCADA Open');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15410105,154101,'Secondary Breaker Detail Symbol','CAPABLE_YN = ''Y'' and STATUS_NORMAL_C=''CLOSED''',5,154105,'Secondary Breaker Detail Symbol - SCADA Closed');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15410106,154101,'Secondary Breaker Detail Symbol','CAPABLE_YN = ''Y''',6,154106,'Secondary Breaker Detail Symbol - SCADA default');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15410107,154101,'Secondary Breaker Detail Symbol','FEATURE_STATE_C in (''PPI'',''ABI'')',7,154107,'Secondary Breaker Detail Symbol - PPI');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15410108,154101,'Secondary Breaker Detail Symbol','FEATURE_STATE_C in (''PPR'',''ABR'',''PPA'',''ABA'')',8,154108,'Secondary Breaker Detail Symbol - PPR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15410109,154101,'Secondary Breaker Detail Symbol','FEATURE_STATE_C in (''OSR'',''OSA'')',9,154109,'Secondary Breaker Detail Symbol - OSR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15410110,154101,'Secondary Breaker Detail Symbol','STATUS_NORMAL_C=''OPEN''',10,154110,'Secondary Breaker Detail Symbol - Open');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15410111,154101,'Secondary Breaker Detail Symbol','STATUS_NORMAL_C=''CLOSED''',11,154111,'Secondary Breaker Detail Symbol - Closed');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15410199,154101,'Secondary Breaker Detail Symbol','',99,154199,'Secondary Breaker Detail Symbol - default');
+
+
+-- Style rules - OMS
+
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15420101,154201,'Secondary Breaker Detail Symbol - OMS','CAPABLE_YN = ''Y'' and FEATURE_STATE_C in (''PPI'',''ABI'')',1,154101,'Secondary Breaker Detail Symbol - SCADA PPI');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15420102,154201,'Secondary Breaker Detail Symbol - OMS','CAPABLE_YN = ''Y'' and FEATURE_STATE_C in (''PPR'',''ABR'',''PPA'',''ABA'')',2,154102,'Secondary Breaker Detail Symbol - SCADA PPR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15420103,154201,'Secondary Breaker Detail Symbol - OMS','CAPABLE_YN = ''Y'' and FEATURE_STATE_C in (''OSR'',''OSA'')',3,154103,'Secondary Breaker Detail Symbol - SCADA OSR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15420104,154201,'Secondary Breaker Detail Symbol - OMS','CAPABLE_YN = ''Y'' and STATUS_NORMAL_C=''OPEN''',4,154104,'Secondary Breaker Detail Symbol - SCADA Open');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15420105,154201,'Secondary Breaker Detail Symbol - OMS','CAPABLE_YN = ''Y'' and STATUS_NORMAL_C=''CLOSED''',5,154105,'Secondary Breaker Detail Symbol - SCADA Closed');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15420106,154201,'Secondary Breaker Detail Symbol - OMS','CAPABLE_YN = ''Y''',6,154106,'Secondary Breaker Detail Symbol - SCADA default');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15420107,154201,'Secondary Breaker Detail Symbol - OMS','FEATURE_STATE_C in (''PPI'',''ABI'')',7,154107,'Secondary Breaker Detail Symbol - PPI');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15420108,154201,'Secondary Breaker Detail Symbol - OMS','FEATURE_STATE_C in (''PPR'',''ABR'',''PPA'',''ABA'')',8,154108,'Secondary Breaker Detail Symbol - PPR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15420109,154201,'Secondary Breaker Detail Symbol - OMS','FEATURE_STATE_C in (''OSR'',''OSA'')',9,154109,'Secondary Breaker Detail Symbol - OSR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15420110,154201,'Secondary Breaker Detail Symbol - OMS','STATUS_NORMAL_C=''OPEN''',10,154110,'Secondary Breaker Detail Symbol - Open');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15420111,154201,'Secondary Breaker Detail Symbol - OMS','STATUS_NORMAL_C=''CLOSED''',11,154111,'Secondary Breaker Detail Symbol - Closed');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (15420199,154201,'Secondary Breaker Detail Symbol - OMS','',99,154199,'Secondary Breaker Detail Symbol - default');
+
+
+spool off;

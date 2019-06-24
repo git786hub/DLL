@@ -1,0 +1,49 @@
+create or replace 
+PACKAGE ETL_CONTROL_PKG
+IS
+-- Version 1.0: 7/6/2017
+-- Developer: Kevin Dulay
+-- Release Comments: 
+-----Version 1.0: Contains Insert and Update Functions into Balance Control Table
+-- Package will contain all functions related to manipulating the ETL Control Tables
+-- Package Comments:
+----Functions do not contain inserts into INTERFACE_LOG table for errored or failed executions
+----Functions do not contain checks for whether a Balance ID was already inserted into the control table
+FUNCTION INSERT_BALANCE_REC(
+    I_COMPONENT_NM VARCHAR2,
+    I_PROCESS_RUN_ID NUMBER ,
+    I_PROCESS_ID NUMBER ,
+    I_SRC_SYS_NM  VARCHAR2,
+    I_TGT_SYS_NM VARCHAR2,
+    I_SRC_OBJ_NM VARCHAR2,
+    I_TGT_OBJ_NM VARCHAR2,
+    I_SRC_COUNT NUMBER,
+    I_TGT_COUNT NUMBER
+    )
+  RETURN VARCHAR2;
+  
+FUNCTION UPDATE_BALANCE_REC(
+    I_COMPONENT_NM VARCHAR2,
+    I_BALANCE_ID NUMBER,
+    I_TGT_COUNT NUMBER
+    )
+  RETURN VARCHAR2;
+  
+FUNCTION GET_AUD_ETL_CONTROL_SEQ_ID(
+    I_VALUE_TYPE VARCHAR2
+)
+  RETURN NUMBER;
+  
+FUNCTION GIS_PURGE 
+(
+I_SCHEMA_NM VARCHAR2,
+I_TABLE_NM VARCHAR2,
+I_FREQUENCY VARCHAR2,
+I_RETENTION NUMBER,
+I_CALENDAR_TYPE_CD VARCHAR2,
+I_PURGE_DT DATE
+)
+RETURN VARCHAR2;
+  
+END ETL_CONTROL_PKG;
+/

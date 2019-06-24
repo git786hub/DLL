@@ -1,0 +1,65 @@
+------------------------------------------------
+AEGIS SYSTEM RELEASE NOTES
+------------------------------------------------
+version:    00.03.07
+delivered:  18-JUL-2018
+author:     Rich Adase (Hexagon)
+------------------------------------------------
+
+CONTENTS:
+
+  * Assemblies     -- Custom DLLs, to be copied to a central location for client use
+
+  * DFS            -- DFS documentation set, updated for this version
+
+  * EdgeFrontier   -- Files for EdgeFrontier systems that have changed for this version
+      In this release:
+        -- GIS_UpdateWritebackStatus.efe
+        -- WMIS_WriteBack.efe
+
+  * FME            -- New FME workbench files for commercial landbase import
+      In this release:
+        -- Pipeline
+           -- Pipeline.fmw             -- Workbench file
+           -- Pipeline.csv             -- Schema mapping
+           -- RunLBImport-Pipeline.bat -- Import batch file
+
+  * IAS_Assemblies -- Binaries specific to the IAS (e.g.- GIS Automation components)
+
+  * Scripts        -- Database scripts containing changes with respect to the previous release and patches
+
+------------------------------------------------
+
+ISSUES ADDRESSED:
+
+  See accompanying spreadsheet.
+
+------------------------------------------------
+
+INSTRUCTIONS:
+
+  1) Use all provided DLLs in the "Assemblies" folder to replace the previously delivered versions.
+
+  2) Load EdgeFrontier systems provided in the "EdgeFrontier" folder.
+
+  3) Use all provided binaries in the "IAS_Assemblies" folder to update components running on the Integration Application Server.
+
+  4) Run scripts:
+
+     a) Connect as the GIS user:
+        1) Run the script "00-run_all_scripts_GIS.sql", which will in turn execute all other scripts with "GIS" in the prefix.
+        2) Log files are created in the C:\Temp folder; verify whether any errors occurred during script execution.
+        3) Perform a manual COMMIT.
+        4) Run the script "00-ExecuteMetadataProcs.sql".
+
+     b) Connect as the SYS user:
+        1) Run the script "00-run_all_scripts_SYS.sql", which will in turn execute all other scripts with "SYS" in the prefix.
+        2) Log files are created in the C:\Temp folder; verify whether any errors occurred during script execution.
+        3) Perform a manual COMMIT.
+
+  5) Publish METADATA.
+
+  6) Publish DATA.  (NOTE: it is only necessary to publish ELECTRIC and FIBER features for this release -- no need to republish LANDBASE.)
+
+------------------------------------------------
+------------------------------------------------

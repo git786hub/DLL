@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SendXmlWebMessage</name>
+    </assembly>
+    <members>
+        <member name="T:GTechnology.Oncor.CustomAPI.SendReceiveXMLMessage">
+            <summary>
+            Class that contains properties and method to make request to Web service URL and gets the response.
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.SendReceiveXMLMessage.URL">
+            <summary>
+            Endpoint address URL
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.SendReceiveXMLMessage.Method">
+            <summary>
+            Type of method GET or POST.
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.SendReceiveXMLMessage.ContentType">
+            <summary>
+            Content type of the request. ex - "text/xml" or "application/soap+xml" etc
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.SendReceiveXMLMessage.RequestXMLBody">
+            <summary>
+            Request xml in string format
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.SendReceiveXMLMessage.ResponseXML">
+            <summary>
+            Response xml in string format
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.SendReceiveXMLMessage.#ctor">
+            <summary>
+            Empty constructor
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.SendReceiveXMLMessage.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor to initialize the parameters
+            </summary>
+            <param name="p_URL">Endpoint address URL</param>
+            <param name="p_ContentType">Content type of the request. ex - "text/xml" or "application/soap+xml" etc</param>
+            <param name="p_RequestXMLBody">Request xml in string format</param>
+            <param name="p_Method">Type of method GET or POST.</param>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.SendReceiveXMLMessage.SendMsgToEF">
+            <summary>
+            Method to send request to a End Point Address and stores the response in a property
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.SendReceiveXMLMessage.SetDefaults">
+            <summary>
+            Method to set default values of request parameters
+            </summary>
+        </member>
+    </members>
+</doc>

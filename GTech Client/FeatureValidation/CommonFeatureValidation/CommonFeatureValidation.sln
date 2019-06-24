@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonFeatureValidation", "CommonFeatureValidation\CommonFeatureValidation.csproj", "{9A7F6973-B5ED-4D3A-8323-9A73B035B7CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonFVInterfaceSharedLibrary", "..\..\Common\CommonFVInterfaceSharedLibrary\CommonFVInterfaceSharedLibrary.csproj", "{E2277432-0BB6-4500-84D7-F4691937ADDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "customWorkPointCreator", "..\..\Common\customWorkPointCreator\customWorkPointCreator\customWorkPointCreator.csproj", "{2C14D66D-79D7-4363-8551-ADB7E7AD2226}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A7F6973-B5ED-4D3A-8323-9A73B035B7CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A7F6973-B5ED-4D3A-8323-9A73B035B7CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A7F6973-B5ED-4D3A-8323-9A73B035B7CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A7F6973-B5ED-4D3A-8323-9A73B035B7CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2277432-0BB6-4500-84D7-F4691937ADDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2277432-0BB6-4500-84D7-F4691937ADDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2277432-0BB6-4500-84D7-F4691937ADDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2277432-0BB6-4500-84D7-F4691937ADDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C14D66D-79D7-4363-8551-ADB7E7AD2226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C14D66D-79D7-4363-8551-ADB7E7AD2226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C14D66D-79D7-4363-8551-ADB7E7AD2226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C14D66D-79D7-4363-8551-ADB7E7AD2226}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBF2F1E2-2418-4E28-A5AE-8E0D34474C6A}
+	EndGlobalSection
+EndGlobal

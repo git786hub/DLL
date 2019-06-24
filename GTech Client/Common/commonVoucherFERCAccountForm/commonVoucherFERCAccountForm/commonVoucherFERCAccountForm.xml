@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>commonVoucherFERCAccountForm</name>
+    </assembly>
+    <members>
+        <member name="M:GTechnology.Oncor.CustomAPI.clsCommon.#ctor(ADODB.Recordset)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="p_attributeRS">Recordset of the Voucher attributes which needs to be displayed in form</param>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.clsCommon.LoadVoucherFERCAccountData(Intergraph.GTechnology.API.IGTKeyObject)">
+            <summary>
+            Method to Load VoucherFERCAccount Data to grid.
+            </summary>
+            <param name="p_workPointFeature">Current feature which is placed</param>
+        </member>
+        <member name="T:GTechnology.Oncor.CustomAPI.VoucherFERCAccountForm">
+            <summary>
+            VoucherFERCAccountForm
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.VoucherFERCAccountForm.#ctor(ADODB.Recordset,Intergraph.GTechnology.API.IGTKeyObject,System.String,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="attributeRS">Recordset of the Voucher attributes which needs to be displayed in form</param>
+            <param name="feature">Current feature which is placed</param>
+            <param name="fkqConfigAttr">Attribute for which FKQ is configured</param>
+            <param name="readOnly">Attribute Grid mode when the interface is called</param>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.VoucherFERCAccountForm.#ctor(ADODB.Recordset)">
+            <summary>
+            VoucherFERCAccountForm
+            </summary>
+            <param name="attributeRS">Recordset of the Voucher attributes which needs to be displayed in for</param>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.VoucherFERCAccountForm.AccountValue">
+            <summary>
+            AccountValue
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.VoucherFERCAccountForm.MoveRecordSetToCurrentCID(ADODB.Recordset,System.Int32)">
+            <summary>
+            Move the recordset to the current CID value.
+            </summary>
+            <param name="oCompRS">Recordset which needs to moved to current CID value</param>
+            <param name="iCurrentCID">Current CID value</param>
+        </member>
+        <member name="F:GTechnology.Oncor.CustomAPI.VoucherFERCAccountForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.VoucherFERCAccountForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.VoucherFERCAccountForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17449443-A29E-4C8D-8B3D-56B99DC5ACCB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GTechnology.Oncor.CustomAPI</RootNamespace>
+    <AssemblyName>ccEditNJUNSTicketData</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\assemblies\custom\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADODB, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\..\..\assemblies\product\ADODB.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Intergraph.GTechnology">
+      <HintPath>..\..\..\assemblies\product\Intergraph.GTechnology.dll</HintPath>
+      <Private>False</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ccEditNJUNSTicketData.cs" />
+    <Compile Include="GridSelectionHelper.cs" />
+    <Compile Include="poleTicketsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="poleTicketsForm.Designer.cs">
+      <DependentUpon>poleTicketsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmEditNjunsTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditNjunsTicket.Designer.cs">
+      <DependentUpon>frmEditNjunsTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticket.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmEditNjunsTicket.resx">
+      <DependentUpon>frmEditNjunsTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="poleTicketsForm.resx">
+      <DependentUpon>poleTicketsForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\GTechnology.Oncor.CustomAPI.Ticket.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\customBoundaryQuery\customBoundaryQuery\customBoundaryQuery.csproj">
+      <Project>{aeb15b2f-f0b9-455b-b01b-0cf897579903}</Project>
+      <Name>customBoundaryQuery</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\customNjunsSharedLibrary\customNjunsSharedLibrary\customNjunsSharedLibrary.csproj">
+      <Project>{6bd2efe3-4a61-47db-b46f-68af42288667}</Project>
+      <Name>customNjunsSharedLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

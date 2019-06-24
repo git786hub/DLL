@@ -1,0 +1,62 @@
+------------------------------------------------
+AEGIS SYSTEM RELEASE NOTES
+------------------------------------------------
+version:    00.03.09 (Sprint 1)
+delivered:  30-AUG-2018
+author:     Rich Adase (Hexagon)
+------------------------------------------------
+
+CONTENTS:
+
+  * Assemblies/GT_Assemblies  -- Custom DLLs, to be copied to a central location for client use
+
+  * Assemblies/IAS_Assemblies -- Binaries specific to the IAS (e.g.- GIS Automation components)
+
+  * Scripts                   -- Database scripts containing changes with respect to the previous release and patches
+
+------------------------------------------------
+
+ISSUES ADDRESSED:
+
+  Critical  714 - Update Trace Does Not Populate Upstream Node Attribute for Features
+  Critical  759 - Regression - There Are No CU Codes to Select For The Primary Switch - OH Feature
+  Critical  828 - CU driven attributes should not be required
+  High      418 - User is Not Able to Search By Current User Despite Being the Assigned Designer
+  High      708 - SIZE_C Attribute Should Not Be Required For The Guy Feature
+
+*** NOTE: Final confirmation is pending on these additional Sprint 1 issues; we will update notes when that occurs:
+     High  391 - WR/Job Name Displays Incorrectly in Job Environment Window
+     High  472 - AEGIS GUI Does Not Display Notification of a Successful Writeback
+     High  478 - AEGIS is Not Receiving a Notification for Failed Writeback
+     High  651 - Writeback failed: Error has occurred while setting the WMIS Status: WRITEBACK
+     High  760 - Regression - CU Code Is Not Applying Information into CU Driven Attributes in Pole Attributes Tab
+***
+
+------------------------------------------------
+
+INSTRUCTIONS:
+
+  1) Use all provided DLLs in the "Assemblies/GT_Assemblies" folder to replace the previously delivered client versions.
+
+  2) Use all provided binaries in the "Assemblies/IAS_Assemblies" folder to update components running on the Integration Application Server.
+
+  3) Run scripts:
+
+     a) Connect as the SYS user:
+        1) Run the script "01-run_all_scripts_SYS.sql", which will in turn execute all other scripts with "SYS" in the prefix.
+        2) Log files are created in the C:\Temp folder; verify whether any errors occurred during script execution.
+
+     b) Connect as the GIS_ONC user:
+        1) Run the script "02-run_all_scripts_GISONC.sql", which will in turn execute all other scripts with "GISONC" in the prefix.
+        2) Log files are created in the C:\Temp folder; verify whether any errors occurred during script execution.
+
+     c) Connect as the GIS user:
+        1) Run the script "03-run_all_scripts_GIS.sql", which will in turn execute all other scripts with "GIS" in the prefix.
+        2) Log files are created in the C:\Temp folder; verify whether any errors occurred during script execution.
+
+  4) Publish METADATA.
+
+  5) There is NO NEED to Publish DATA.  
+
+------------------------------------------------
+------------------------------------------------

@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>utlJobManager</name>
+    </assembly>
+    <members>
+        <member name="T:GTechnology.Oncor.CustomAPI.JobManager">
+            <summary>
+            Wrapper around some of the JobManagementService functions
+            to aid in job-related functions specific to Oncor.
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.JobManager.#ctor">
+            <summary>
+            Constructor for the JobManager class
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.JobManager.NullNumericFieldValue">
+            <summary>
+            Flag to indicate a NULL numeric field was retrieved.
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.JobManager.ActiveJob">
+            <summary>
+            Returns the active job name or null if no active job exists.
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.JobManager.strJobFieldValue(System.String)">
+            <summary>
+            Gets the string value for FieldName from the active job.
+            </summary>
+            <param name="FieldName">Field in G3E_JOB</param>
+            <returns>string field value</returns>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.JobManager.intJobFieldValue(System.String)">
+            <summary>
+            Gets the int value for FieldName (a NUMBER datatype column) from the active job.
+            </summary>
+            <param name="FieldName">Field in G3E_JOB</param>
+            <returns>int field value</returns>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.JobManager.WMISStatus">
+            <summary>
+            Gets or sets the value of G3E_JOB.WMIS_STATUS_C for the active job.
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.JobManager.WRNumber">
+            <summary>
+            Gets the WR Number for the active job.
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.JobManager.JobType">
+            <summary>
+            Gets or sets the value of G3E_JOB.G3E_JOBTYPE for the active job.
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.JobManager.WriteBackNeeded">
+            <summary>
+            Gets or sets the Write Back Needed flag for the active job.  Y = true, N = false.
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.JobManager.JobStatus">
+            <summary>
+            Gets or sets the value of G3E_JOB.G3E_JOBSTATUS for the active job.
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.JobManager.AlternatesExistPendingApproval">
+            <summary>
+            Returns true if any alternates to the active job have Job Status = ApprovalPending.
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.JobManager.AlternatesPendingApproval">
+            <summary>
+            Returns a list of alternate jobs that are pending approval.  There should only be one entry in the list.
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.JobManager.AlternatesExist">
+            <summary>
+            Returns true if there are any alternates for the active job
+            </summary>
+        </member>
+        <member name="P:GTechnology.Oncor.CustomAPI.JobManager.Alternates">
+            <summary>
+            Returns a list of alternate jobs if any exist for the active job.
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.JobManager.ActivateJob(System.String)">
+            <summary>
+            Activates the specified job
+            </summary>
+            <param name="JobName">Job to activate.</param>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.JobManager.DeactivateJob(System.Boolean)">
+            <summary>
+            Deactivates the active job
+            </summary>
+            <param name="ViewJob">If true, keeps the active job in the viewed job list.</param>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.JobManager.UpdateJobField(System.String,System.String,System.String)">
+            <summary>
+            Updates a given field in the G3E_JOB table.
+            </summary>
+            <param name="jobID">Job ID (G3E_IDENTIFIER)</param>
+            <param name="fieldName">Field to update</param>
+            <param name="fieldValue">Value to assign to field</param>
+            <returns>Contains exception message string.</returns>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.JobManager.JobRecordExists">
+            <summary>
+            Checks G3E_JOB for existence of a single occurrence of the active job.
+            </summary>
+            <returns>Error string if an error is encountered; otherwise string.Empty</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,88 @@
+set echo on
+set linesize 1000
+set pagesize 300
+set trimspool on
+
+spool c:\temp\StyleRules_PrimaryEnclosure.log
+--**************************************************************************************
+-- SCRIPT NAME: StyleRules_PrimaryEnclosure.sql
+--**************************************************************************************
+-- AUTHOR			    : INGRNET\RRADASE
+-- DATE				    : 10-MAR-2018
+-- PRODUCT VERSION	: 10.3.0
+-- PRJ IDENTIFIER	: G/TECHNOLOGY - ONCOR
+-- PROGRAM DESC		: Styles and style rules for Primary Enclosure
+--**************************************************************************************
+-- Modified:
+--  17-JUL-2018, Rich Adase -- SME symbology review
+--**************************************************************************************
+
+alter trigger M_T_AUDR_G3E_STYLERULE_RULE disable;
+alter trigger M_T_AUD_G3E_STYLERULE_RULE disable;
+
+declare
+  TYPE numArray IS TABLE OF NUMBER INDEX BY PLS_INTEGER;
+  arrSNO  numArray;
+  i       PLS_INTEGER;
+begin
+  select distinct G3E_SNO
+    bulk collect into arrSNO
+    from G3E_STYLERULE
+    where G3E_RULE in ('Primary Enclosure Symbol', 'Primary Enclosure Symbol - OMS');
+  
+  delete from G3E_STYLERULE where G3E_RULE = 'Primary Enclosure Symbol';
+  delete from G3E_STYLERULE where G3E_RULE = 'Primary Enclosure Symbol - OMS';
+  
+  for i in 1..arrSNO.COUNT loop
+    delete from G3E_POINTSTYLE where G3E_SNO = arrSNO(i);
+    delete from G3E_STYLE where G3E_SNO = arrSNO(i);
+  end loop;
+end;
+/
+
+alter trigger M_T_AUDR_G3E_STYLERULE_RULE enable;
+alter trigger M_T_AUD_G3E_STYLERULE_RULE enable;
+
+-- Point styles
+
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (5101,'Primary Enclosure Symbol PPI','AEGIS Device',CHR(55),10158079,24,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (5102,'Primary Enclosure Symbol PPR','AEGIS Device',CHR(55),14540253,24,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (5103,'Primary Enclosure Symbol OSR','AEGIS Device',CHR(55),5921370,24,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (5104,'Primary Enclosure Symbol - KV1','AEGIS Device',CHR(55),3956378,24,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (5105,'Primary Enclosure Symbol - KV2','AEGIS Device',CHR(55),24285,24,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (5106,'Primary Enclosure Symbol - KV3','AEGIS Device',CHR(55),39679,24,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (5107,'Primary Enclosure Symbol - KV4','AEGIS Device',CHR(55),8453982,24,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (5108,'Primary Enclosure Symbol - KV5','AEGIS Device',CHR(55),39424,24,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (5109,'Primary Enclosure Symbol - KV6','AEGIS Device',CHR(55),19200,24,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (5199,'Primary Enclosure Symbol Default','AEGIS Device',CHR(55),65535,24,0,0,0,null,0,1);
+
+
+-- Style rules - GIS
+
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (510101,5101,'Primary Enclosure Symbol','FEATURE_STATE_C in (''PPI'',''ABI'')',1,5101,'Primary Enclosure Symbol PPI');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (510102,5101,'Primary Enclosure Symbol','FEATURE_STATE_C in (''PPR'',''ABR'',''PPA'',''ABA'')',2,5102,'Primary Enclosure Symbol PPR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (510103,5101,'Primary Enclosure Symbol','FEATURE_STATE_C in (''OSR'',''OSA'')',3,5103,'Primary Enclosure Symbol OSR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (510104,5101,'Primary Enclosure Symbol','VOLT_1_Q = 4.1',4,5104,'Primary Enclosure Symbol - KV1');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (510105,5101,'Primary Enclosure Symbol','VOLT_1_Q = 12.5',5,5105,'Primary Enclosure Symbol - KV2');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (510106,5101,'Primary Enclosure Symbol','VOLT_1_Q = 13.2',6,5106,'Primary Enclosure Symbol - KV3');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (510107,5101,'Primary Enclosure Symbol','VOLT_1_Q = 21.6',7,5107,'Primary Enclosure Symbol - KV4');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (510108,5101,'Primary Enclosure Symbol','VOLT_1_Q = 24.9',8,5108,'Primary Enclosure Symbol - KV5');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (510109,5101,'Primary Enclosure Symbol','VOLT_1_Q = 33',9,5109,'Primary Enclosure Symbol - KV6');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (510199,5101,'Primary Enclosure Symbol','',99,5199,'Primary Enclosure Symbol Default');
+
+
+-- Style rules - OMS
+
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (520101,5201,'Primary Enclosure Symbol - OMS','FEATURE_STATE_C in (''PPI'',''ABI'')',1,5101,'Primary Enclosure Symbol PPI');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (520102,5201,'Primary Enclosure Symbol - OMS','FEATURE_STATE_C in (''PPR'',''ABR'',''PPA'',''ABA'')',2,5102,'Primary Enclosure Symbol PPR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (520103,5201,'Primary Enclosure Symbol - OMS','FEATURE_STATE_C in (''OSR'',''OSA'')',3,5103,'Primary Enclosure Symbol OSR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (520104,5201,'Primary Enclosure Symbol - OMS','VOLT_1_Q = 4.1',4,5104,'Primary Enclosure Symbol - KV1');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (520105,5201,'Primary Enclosure Symbol - OMS','VOLT_1_Q = 12.5',5,5105,'Primary Enclosure Symbol - KV2');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (520106,5201,'Primary Enclosure Symbol - OMS','VOLT_1_Q = 13.2',6,5106,'Primary Enclosure Symbol - KV3');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (520107,5201,'Primary Enclosure Symbol - OMS','VOLT_1_Q = 21.6',7,5107,'Primary Enclosure Symbol - KV4');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (520108,5201,'Primary Enclosure Symbol - OMS','VOLT_1_Q = 24.9',8,5108,'Primary Enclosure Symbol - KV5');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (520109,5201,'Primary Enclosure Symbol - OMS','VOLT_1_Q = 33',9,5109,'Primary Enclosure Symbol - KV6');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (520199,5201,'Primary Enclosure Symbol - OMS','',99,5199,'Primary Enclosure Symbol Default');
+
+
+spool off;

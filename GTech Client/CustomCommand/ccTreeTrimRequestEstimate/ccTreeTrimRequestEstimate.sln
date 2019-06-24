@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ccTreeTrimRequestEstimate", "ccTreeTrimRequestEstimate\ccTreeTrimRequestEstimate.csproj", "{78B08B68-9BB1-4369-B89D-E45ADDD639B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commonVoucherFERCAccountForm", "..\..\Common\commonVoucherFERCAccountForm\commonVoucherFERCAccountForm\commonVoucherFERCAccountForm.csproj", "{34CE3CD3-6221-46C9-B18F-596C87EDA9B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78B08B68-9BB1-4369-B89D-E45ADDD639B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78B08B68-9BB1-4369-B89D-E45ADDD639B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78B08B68-9BB1-4369-B89D-E45ADDD639B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78B08B68-9BB1-4369-B89D-E45ADDD639B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34CE3CD3-6221-46C9-B18F-596C87EDA9B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34CE3CD3-6221-46C9-B18F-596C87EDA9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34CE3CD3-6221-46C9-B18F-596C87EDA9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34CE3CD3-6221-46C9-B18F-596C87EDA9B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C96AA94-2193-4023-9E22-7BD0E217CB58}
+	EndGlobalSection
+EndGlobal

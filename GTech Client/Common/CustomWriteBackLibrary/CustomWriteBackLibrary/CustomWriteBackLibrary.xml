@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CustomWriteBackLibrary</name>
+    </assembly>
+    <members>
+        <member name="E:CustomWriteBackLibrary.SharedWriteBackLibrary.UpdateJobStatusProcessCompleted">
+            <summary>
+            Event that is raised when Update Job Status processing is completed. Client needs to register this event to get notification of Update Job Status process completion
+            </summary>
+        </member>
+        <member name="E:CustomWriteBackLibrary.SharedWriteBackLibrary.WriteBackProcessCompleted">
+            <summary>
+            Event that is raised when Writeback processing is completed. Client needs to register this event to get notification of Writeback  process completion
+            </summary>
+        </member>
+        <member name="M:CustomWriteBackLibrary.SharedWriteBackLibrary.UpdateWriteBack(System.String,System.Object)">
+            <summary>
+            Method to initiate Update Writeback processing. This method is an asynchronous call and client will get notification of completion of the process through event UpdateJobStatusProcessCompleted
+            </summary>
+            <param name="p_sJobIdentifier">G3E_JOB.G3E_JOBIDENTIFIER</param>
+            <param name="taskID"> Unique task ID that needs to be passed through caller. Example  Guid taskID = Guid.NewGuid();</param>
+        </member>
+        <member name="M:CustomWriteBackLibrary.SharedWriteBackLibrary.UpdateJobStatus(System.String,System.String,System.Object)">
+            <summary>
+            Method to initiate Update Job Status processing. This method is an asynchronous call and client will get notification of completion of the process through event WriteBackProcessCompleted
+            </summary>
+            <param name="p_wrNumber">G3E_JOB.WR_NBR</param>
+            <param name="p_jobStatus">G3E_JOB.JOB_STATUS</param>
+            <param name="taskId">Unique task ID that needs to be passed through caller. Example  Guid taskID = Guid.NewGuid();</param>
+        </member>
+        <member name="M:CustomWriteBackLibrary.DataAccess.GetFirstFieldValueFromRecordset(System.String)">
+            <summary>
+            Method to get first field of the first recordset in string format
+            </summary>
+            <param name="p_sql"> SQL string to process </param>
+            <returns></returns>
+        </member>
+        <member name="M:CustomWriteBackLibrary.DataAccess.GetRecordSet(System.String)">
+            <summary>
+            Method to get recordset
+            </summary>
+            <param name="p_sqlString"> SQL string</param>
+            <returns> Recordset object after executing SQL </returns>
+        </member>
+        <member name="M:CustomWriteBackLibrary.DataAccess.GetEFUrl(System.String,System.String)">
+            <summary>
+            Method to get URL
+            </summary>
+            <param name="p_paramName">SYS_GENERALPARAMETER.SUBSYSTEM_COMPONENT</param>
+            <param name="p_subSystemName">SYS_GENERALPARAMETER.SUBSYSTEM_NAME</param>
+            <returns></returns>
+        </member>
+        <member name="T:CustomWriteBackLibrary.WriteBackCompletedEventArgs">
+            <summary>
+            This event argument class is responsible for passing the information back to the caller.
+            The valid values for the Status are FAILURE or SUCCESS
+            </summary>
+        </member>
+        <member name="T:CustomWriteBackLibrary.UpdateStatusCompleteEventArgs">
+            This event argument class is responsible for passing the information back to the caller.
+            The valid values for the Status are FAILURE or SUCCESS
+        </member>
+        <member name="M:CustomWriteBackLibrary.JobStatusUpdate.UpdateJobStatus(System.String,System.String,System.Object)">
+            <summary>
+            This method will be called by the client to update job status and this will be launched asynchronously. Client needs to register event UpdateJobStatusProcessCompleted to get the notification of this method completion
+            </summary>
+            <param name="p_wrNumber">WR Number</param>
+            <param name="p_jobStatus">Job Status</param>
+            <param name="taskId">A new GUID needs to be passed for this parameter</param>
+        </member>
+        <member name="M:CustomWriteBackLibrary.JobStatusUpdate.GetCanonicalJobStatus(System.String)">
+            <summary>
+            Method to the EF url for input parameter name and Sub system name
+            </summary>
+            <param name="paramName"> param name in the table</param>
+            <param name="subSystemName"> subsystem name for the corresponsing param name</param>
+            <returns>EF url</returns>
+        </member>
+        <member name="M:CustomWriteBackLibrary.ProcessJobStatusUpdate.ProcessUpdateJobStatus(System.String,System.String,System.String@)">
+            <summary>
+            Method to call processing of Update Job Status
+            </summary>
+            <param name="p_wrNumber">G3E_JOB.WR_NBR</param>
+            <param name="p_jobStatus">G3E_JOB.JOB_STATUS</param>
+            <param name="p_errorInfo">Any error infor</param>
+            <returns>returns the Status as SUCCESS or FAILURE</returns>
+        </member>
+        <member name="M:CustomWriteBackLibrary.ProcessWriteBack.ProcessWriteBackStatusUpdate(System.String,System.String,System.Boolean,CustomWriteBackLibrary.WebServiceResponse@,System.String@)">
+            <summary>
+            Method to carry out processing of Writeback
+            </summary>
+            <param name="p_sJobIdentifier"> G3E_JOB.G3E_IDENTIFIER</param>
+            <param name="p_passWord">Password string in the form Password='TEST';</param>
+            <param name="p_sStatus">G3E_JOB.JOB_STATUS to be set for the job</param>
+            <param name="p_errorInfo">Out parameter for the error info</param>
+        </member>
+        <member name="T:CustomWriteBackLibrary.RequestHeaderType">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.RequestHeaderType.SourceSystem">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.RequestHeaderType.TransactionId">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.RequestHeaderType.TransactionType">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.RequestHeaderType.Requestor">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.RequestHeaderType.Timestamp">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.RequestHeaderType.TimestampSpecified">
+            <remarks/>
+        </member>
+        <member name="T:CustomWriteBackLibrary.ResponseType">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.ResponseType.Status">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.ResponseType.ResultCode">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.ResponseType.ErrorMsg">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.ResponseType.Timestamp">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.ResponseType.TimestampSpecified">
+            <remarks/>
+        </member>
+        <member name="T:CustomWriteBackLibrary.disWorkRequestType">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.disWorkRequestType.disWorkRequestRequest">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.disWorkRequestType.disWorkRequestResponse">
+            <remarks/>
+        </member>
+        <member name="T:CustomWriteBackLibrary.disWorkRequestRequestType">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.disWorkRequestRequestType.RequestHeader">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.disWorkRequestRequestType.WorkRequest">
+            <remarks/>
+        </member>
+        <member name="T:CustomWriteBackLibrary.WorkRequestType">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.WRNumber">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.WRStatus">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.PercentDesignComplete">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.PercentDesignCompleteSpecified">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.PercentConstructionComplete">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.PercentConstructionCompleteSpecified">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.CrewHQ">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.MgmtActivityCode">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.WRType">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.ConstReadyDate">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.ConstReadyDateSpecified">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.CustRequiredDate">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.CustRequiredDateSpecified">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.WRName">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.WRScope">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.HouseNumber">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.HouseNumberFract">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.LeadingDir">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.StreetName">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.StreetType">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.TrailingDir">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.Town">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.County">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.DesignerAssignment">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.DualCert">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.DualCertPwrCo1">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.DualCertPwrCo2">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.AssocCost">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.AssocCostSpecified">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.WorkRequestType.ElectricInService">
+            <remarks/>
+        </member>
+        <member name="T:CustomWriteBackLibrary.disWorkRequestResponseType">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.disWorkRequestResponseType.ResultStatus">
+            <remarks/>
+        </member>
+        <member name="P:CustomWriteBackLibrary.disWorkRequestResponseType.WorkRequest">
+            <remarks/>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:CustomWriteBackLibrary.WritebackClass.UpdateWriteBack(System.String,System.Object)" -->
+    </members>
+</doc>

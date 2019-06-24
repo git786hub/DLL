@@ -1,0 +1,29 @@
+create or replace 
+PACKAGE ETL_INTERFACE_PKG
+IS
+-- Version 1.0: 12/11/2017
+-- Developer: Kevin Dulay
+-- Release Comments: 
+-----Version 1.0: Contains shared component for referential deletes
+-- Package will contain all functions related to maintaining referential integrity for GIS custom tables, and other ETL interface related activities.
+-- Package Comments:
+----Functions do not contain inserts into INTERFACE_LOG table for errored or failed executions
+----Functions do not contain checks for whether a Balance ID was already inserted into the control table
+ 
+ 
+FUNCTION REF_INT_DELETE
+(
+    I_INTERFACE_NM VARCHAR2,
+    I_TABLE_NM VARCHAR2
+)
+RETURN VARCHAR2;
+
+FUNCTION REF_INT_UPDATE_FLAG
+(
+    I_INTERFACE_NM VARCHAR2,
+    I_TABLE_NM VARCHAR2
+)
+RETURN VARCHAR2;
+  
+END ETL_INTERFACE_PKG;
+/

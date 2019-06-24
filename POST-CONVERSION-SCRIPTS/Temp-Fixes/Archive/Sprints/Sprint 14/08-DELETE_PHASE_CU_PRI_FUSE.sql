@@ -1,0 +1,31 @@
+SET ECHO ON
+SET LINESIZE 1000
+SET PAGESIZE 300
+SET TRIMSPOOL ON
+SPOOL DELETE_PHASE_CU_PRI_FUSE.LOG
+
+
+ALTER TABLE GIS.B$PRI_FUSE_UNIT_N DISABLE ALL TRIGGERS;
+
+DELETE
+    FROM GIS.B$PRI_FUSE_UNIT_N PF
+    WHERE 1=1
+        AND PF.LTT_ID = 0
+        AND PF.G3E_CID > 1
+        AND PF.PHASE_C IN ('X', 'x', NULL, 'UNK')
+        AND NOT EXISTS 
+            (
+                SELECT 1
+                FROM GIS.B$COMP_UNIT_N CU
+                WHERE 1=1
+                    AND LTT_ID = 0
+                    AND CU_C IS NULL
+                    AND PF.G3E_CID = CU.G3E_CID
+                    AND PF.G3E_FID = CU.G3E_FID
+                    AND PF.G3E_FNO = CU.G3E_FNO
+            ); 
+COMMIT;
+
+ALTER TABLE GIS.B$PRI_FUSE_UNIT_N ENABLE ALL TRIGGERS;
+
+SPOOL OFF;

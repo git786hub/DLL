@@ -1,0 +1,88 @@
+set echo on
+set linesize 1000
+set pagesize 300
+set trimspool on
+
+spool c:\temp\StyleRules_SubstationBreaker.log
+--**************************************************************************************
+-- SCRIPT NAME: StyleRules_SubstationBreaker.sql
+--**************************************************************************************
+-- AUTHOR			    : INGRNET\RRADASE
+-- DATE				    : 10-MAR-2018
+-- PRODUCT VERSION	: 10.3.0
+-- PRJ IDENTIFIER	: G/TECHNOLOGY - ONCOR
+-- PROGRAM DESC		: Styles and style rules for Substation Breaker
+--**************************************************************************************
+-- Modified:
+--  17-JUL-2018, Rich Adase -- SME symbology review
+--**************************************************************************************
+
+alter trigger M_T_AUDR_G3E_STYLERULE_RULE disable;
+alter trigger M_T_AUD_G3E_STYLERULE_RULE disable;
+
+declare
+  TYPE numArray IS TABLE OF NUMBER INDEX BY PLS_INTEGER;
+  arrSNO  numArray;
+  i       PLS_INTEGER;
+begin
+  select distinct G3E_SNO
+    bulk collect into arrSNO
+    from G3E_STYLERULE
+    where G3E_RULE in ('Substation Breaker Symbol', 'Substation Breaker Symbol - OMS');
+  
+  delete from G3E_STYLERULE where G3E_RULE = 'Substation Breaker Symbol';
+  delete from G3E_STYLERULE where G3E_RULE = 'Substation Breaker Symbol - OMS';
+  
+  for i in 1..arrSNO.COUNT loop
+    delete from G3E_POINTSTYLE where G3E_SNO = arrSNO(i);
+    delete from G3E_STYLE where G3E_SNO = arrSNO(i);
+  end loop;
+end;
+/
+
+alter trigger M_T_AUDR_G3E_STYLERULE_RULE enable;
+alter trigger M_T_AUD_G3E_STYLERULE_RULE enable;
+
+-- Point styles
+
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (16601,'Substation Breaker Symbol - SCADA PPI','AEGIS Device',CHR(80),10158079,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (16602,'Substation Breaker Symbol - SCADA PPR','AEGIS Device',CHR(80),14540253,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (16603,'Substation Breaker Symbol - SCADA OSR','AEGIS Device',CHR(80),5921370,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (16604,'Substation Breaker Symbol - SCADA Open','AEGIS Device',CHR(80),65280,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (16605,'Substation Breaker Symbol - SCADA Closed','AEGIS Device',CHR(80),255,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (16606,'Substation Breaker Symbol - PPI','AEGIS Device',CHR(79),10158079,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (16607,'Substation Breaker Symbol - PPR','AEGIS Device',CHR(79),14540253,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (16608,'Substation Breaker Symbol - OSR','AEGIS Device',CHR(79),5921370,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (16609,'Substation Breaker Symbol - Open','AEGIS Device',CHR(79),65280,12,0,0,0,null,0,1);
+insert into G3E_POINTSTYLE(G3E_SNO,G3E_USERNAME,G3E_FONTNAME,G3E_SYMBOL,G3E_COLOR,G3E_SIZE,G3E_ALIGNMENT,G3E_ROTATION,G3E_USEMASK,G3E_MASKSYMBOL,G3E_PLOTREDLINE,G3E_STYLEUNITS) values (16610,'Substation Breaker Symbol - Closed','AEGIS Device',CHR(79),255,12,0,0,0,null,0,1);
+
+
+-- Style rules - GIS
+
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1610101,16101,'Substation Breaker Symbol','CAPABLE_YN=''Y'' and FEATURE_STATE_C in (''PPI'',''ABI'') ',1,16601,'Substation Breaker Symbol - SCADA PPI');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1610102,16101,'Substation Breaker Symbol','CAPABLE_YN=''Y'' and FEATURE_STATE_C in (''PPR'',''ABR'',''PPA'',''ABA'') ',2,16602,'Substation Breaker Symbol - SCADA PPR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1610103,16101,'Substation Breaker Symbol','CAPABLE_YN=''Y'' and FEATURE_STATE_C in (''OSR'',''OSA'')',3,16603,'Substation Breaker Symbol - SCADA OSR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1610104,16101,'Substation Breaker Symbol','CAPABLE_YN=''Y'' and STATUS_NORMAL_C = ''OPEN''',4,16604,'Substation Breaker Symbol - SCADA Open');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1610105,16101,'Substation Breaker Symbol','CAPABLE_YN=''Y'' and STATUS_NORMAL_C = ''CLOSED''',5,16605,'Substation Breaker Symbol - SCADA Closed');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1610106,16101,'Substation Breaker Symbol','FEATURE_STATE_C in (''PPI'',''ABI'') ',6,16606,'Substation Breaker Symbol - PPI');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1610107,16101,'Substation Breaker Symbol','FEATURE_STATE_C in (''PPR'',''ABR'',''PPA'',''ABA'') ',7,16607,'Substation Breaker Symbol - PPR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1610108,16101,'Substation Breaker Symbol','FEATURE_STATE_C in (''OSR'',''OSA'')',8,16608,'Substation Breaker Symbol - OSR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1610109,16101,'Substation Breaker Symbol','STATUS_NORMAL_C = ''OPEN''',9,16609,'Substation Breaker Symbol - Open');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1610199,16101,'Substation Breaker Symbol','',99,16610,'Substation Breaker Symbol - Closed');
+
+
+-- Style rules - OMS
+
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1620101,16201,'Substation Breaker Symbol - OMS','CAPABLE_YN=''Y'' and FEATURE_STATE_C in (''PPI'',''ABI'') ',1,16601,'Substation Breaker Symbol - SCADA PPI');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1620102,16201,'Substation Breaker Symbol - OMS','CAPABLE_YN=''Y'' and FEATURE_STATE_C in (''PPR'',''ABR'',''PPA'',''ABA'') ',2,16602,'Substation Breaker Symbol - SCADA PPR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1620103,16201,'Substation Breaker Symbol - OMS','CAPABLE_YN=''Y'' and FEATURE_STATE_C in (''OSR'',''OSA'')',3,16603,'Substation Breaker Symbol - SCADA OSR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1620104,16201,'Substation Breaker Symbol - OMS','CAPABLE_YN=''Y'' and STATUS_NORMAL_C = ''OPEN''',4,16604,'Substation Breaker Symbol - SCADA Open');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1620105,16201,'Substation Breaker Symbol - OMS','CAPABLE_YN=''Y'' and STATUS_NORMAL_C = ''CLOSED''',5,16605,'Substation Breaker Symbol - SCADA Closed');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1620106,16201,'Substation Breaker Symbol - OMS','FEATURE_STATE_C in (''PPI'',''ABI'') ',6,16606,'Substation Breaker Symbol - PPI');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1620107,16201,'Substation Breaker Symbol - OMS','FEATURE_STATE_C in (''PPR'',''ABR'',''PPA'',''ABA'') ',7,16607,'Substation Breaker Symbol - PPR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1620108,16201,'Substation Breaker Symbol - OMS','FEATURE_STATE_C in (''OSR'',''OSA'')',8,16608,'Substation Breaker Symbol - OSR');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1620109,16201,'Substation Breaker Symbol - OMS','STATUS_NORMAL_C = ''OPEN''',9,16609,'Substation Breaker Symbol - Open');
+insert into G3E_STYLERULE(G3E_SRROWNO,G3E_SRNO,G3E_RULE,G3E_FILTER,G3E_FILTERORDINAL,G3E_SNO,G3E_DESCRIPTION) values (1620199,16201,'Substation Breaker Symbol - OMS','',99,16610,'Substation Breaker Symbol - Closed');
+
+
+spool off;

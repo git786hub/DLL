@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>commonWorkPointDisplayQuery</name>
+    </assembly>
+    <members>
+        <member name="T:GTechnology.Oncor.CustomAPI.CommonWorkPointDisplayQuery">
+            <summary>
+            CommonWorkPointDisplayQuery
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.CommonWorkPointDisplayQuery.#ctor(Intergraph.GTechnology.API.IGTApplication,ADODB.Recordset,System.Boolean)">
+            <summary>
+            Constructor 
+            </summary>
+            <param name="application">The current G/Technology application object.</param>
+            <param name="currentWorkPointAttributeComponentRecord">Current Recordset of the Workpoint feature record</param>//This Recordset needs to be passed for the Workpoint attribute component that is under transaction and is not yet commited to the DB. In the cases where FI uses this shared component, the Workpoint attribute component recordset that fired the FI needs to be passed, and in all other cases this can be null 
+            <param name="IsDeleteOperation">This parameter is needs to be passed when FI uses this component. In case when FI is fired for addition, pass false and if FI is fired during the delete operation, pass it as true.</param>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.CommonWorkPointDisplayQuery.#ctor(Intergraph.GTechnology.API.IGTApplication)">
+            <summary>
+            Constructor 
+            </summary>
+            <param name="application">The current G/Technology application object.</param>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.CommonWorkPointDisplayQuery.RedisplayWorkPoints">
+            <summary>
+            Method to display off the work point queries of other WR and attach the results of all Work Point features query in the active WR to the display control.
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.CommonWorkPointDisplayQuery.WorkPointDisplayQuery">
+            <summary>
+            This method runs a query for all Work Point features in the active WR and attach the results to the display control
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.CommonWorkPointDisplayQuery.OldWorkPtsDisplayOff">
+            <summary>
+            This method display off the work point queries of other WR and remove the active WR query.
+            </summary>
+        </member>
+        <member name="M:GTechnology.Oncor.CustomAPI.CommonWorkPointDisplayQuery.CheckActiveRecord(ADODB.Recordset)">
+            <summary>
+            Method to Check for the active record is already placed data or new data.
+            </summary>
+            <param name="rs">Recorset of the all workpoints present in active WR</param>
+            <returns>false, if current workpoint attribute record is already present in given parameter recordset rs</returns>
+        </member>
+    </members>
+</doc>

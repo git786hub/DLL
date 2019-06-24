@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActiveMapWindowScale" xml:space="preserve">
+    <value>Échelle de la Vue Active</value>
+  </data>
+  <data name="cmdCreatePlotWindows_Click_MapWindowNotActive" xml:space="preserve">
+    <value>Sélectionné pour insérer la fenêtre de carte active mais une fenêtre de carte n'est pas active.</value>
+  </data>
+  <data name="cmdCreatePlotWindows_Click_NamedPlotAlreadyExists" xml:space="preserve">
+    <value>Le complot nommé {0} existe déjà.  S'il vous plaît fournir une autre {1}.</value>
+    <comment>"The named plot {0}  already exists.  Please provide a different {1}.", oPlotBoundary.Name, sPlotNameUserName</comment>
+  </data>
+  <data name="cmdCreatePlotWindows_Click_NamedPlotAlreadyExistsTitle" xml:space="preserve">
+    <value>Le complot nommé existe déjà</value>
+  </data>
+  <data name="cmdCreatePlotWindows_Click_PleaseProvidePlotName" xml:space="preserve">
+    <value>S'il vous plaît fournir un {0}.</value>
+    <comment>"Please provide a {0}.", sPlotNameUserName</comment>
+  </data>
+  <data name="cmdCreatePlotWindows_Click_PlotNameTitle" xml:space="preserve">
+    <value>No Plan</value>
+  </data>
+  <data name="DataGridViewAttributes1_Legend" xml:space="preserve">
+    <value>Légende</value>
+  </data>
+  <data name="DataGridViewAttributes1_PaperOrientation" xml:space="preserve">
+    <value>Orientation</value>
+  </data>
+  <data name="DataGridViewAttributes1_PaperSize" xml:space="preserve">
+    <value>Taille</value>
+  </data>
+  <data name="DataGridViewAttributes1_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="FitWorkPlanBoundary" xml:space="preserve">
+    <value>Cadrer la Frontière du Graphe</value>
+  </data>
+  <data name="InsertMapFrames_KeyMapAppendQueryGroup" xml:space="preserve">
+    <value>Queries</value>
+  </data>
+  <data name="InsertMapFrames_KeyMapAppendQueryName" xml:space="preserve">
+    <value>Plot Boundary</value>
+  </data>
+  <data name="InsertMapFrames_SetStatusBarText_Inserting" xml:space="preserve">
+    <value> - Insertion: {0}</value>
+    <comment>" - Inserting: {0}", strDatatype</comment>
+  </data>
+  <data name="InsertMapFrames_SetStatusBarText_Inserting_HighlightPlotBoundary" xml:space="preserve">
+    <value> - Insertion: {0}: Mettez en surbrillance limites de la placette.</value>
+    <comment>" - Inserting: {0}: Highlight Plot Boundary.", strDatatype</comment>
+  </data>
+  <data name="InsertMapFrames_SetStatusBarText_Inserting_InsertingFormations" xml:space="preserve">
+    <value>- Insertion: {0}: Formations.</value>
+  </data>
+  <data name="InsertMapFrames_SetStatusBarText_Inserting_LoadLegend" xml:space="preserve">
+    <value> - Insertion: {0}: Chargez Legend.</value>
+    <comment>" - Inserting: {0}: Load Legend", strDatatype</comment>
+  </data>
+  <data name="InsertMapFrames_SetStatusBarText_Inserting_RotateMapView" xml:space="preserve">
+    <value> - Insertion: {0}: Rotation Voir la carte.</value>
+    <comment>" - Inserting: {0}: Rotating Map View", strDatatype</comment>
+  </data>
+  <data name="InsertMapFrames_SetStatusBarText_Inserting_WindowPlotBoundary" xml:space="preserve">
+    <value> - Insertion: {0}: Zoom limites de la placette.</value>
+    <comment>" - Inserting: {0}: Window Plot Boundary", strDatatype</comment>
+  </data>
+  <data name="InsertObjects_SetStatusBarText_Inserting" xml:space="preserve">
+    <value> - Insertion: {0}-{1}</value>
+    <comment>" - Inserting: {0}-{1}", strDatatype, rsObjects.Fields("OB_NAME").Value</comment>
+  </data>
+  <data name="Load_SetStatusBarText_ActiveJobNotSet" xml:space="preserve">
+    <value>&lt;pas encore défini&gt;</value>
+  </data>
+  <data name="Load_SetStatusBarText_GetActiveJobOwner" xml:space="preserve">
+    <value>Obtenir du propriétaire du travail d'Active</value>
+  </data>
+  <data name="Load_SetStatusBarText_GetActiveSessionInfo" xml:space="preserve">
+    <value>Obtenir des informations sur la session active</value>
+  </data>
+  <data name="Load_SetStatusBarText_Launching" xml:space="preserve">
+    <value>Lancement du {0}</value>
+  </data>
+  <data name="Load_SetStatusBarText_LoadingUserDefinedPlotDefaults" xml:space="preserve">
+    <value>Chargement Définir Matrice</value>
+  </data>
+  <data name="Load_SetStatusBarText_NotSet" xml:space="preserve">
+    <value>&lt;pas encore défini&gt;</value>
+  </data>
+  <data name="Load_SetStatusBarText_PopulateUserPicklist" xml:space="preserve">
+    <value>Remplissage liste de sélection d'utilisateur avec des utilisateurs qui ont les limites des parcelles placées</value>
+  </data>
+  <data name="Load_SetStatusBarText_PopulateUsersJobs" xml:space="preserve">
+    <value>Remplissage des emplois de l'utilisateur ayant les limites des parcelles</value>
+  </data>
+  <data name="Load_SetStatusBarText_UpdateButtonStates" xml:space="preserve">
+    <value>Mise à jour états des boutons</value>
+  </data>
+  <data name="Load_SetStatusBarText_UserNotDefined" xml:space="preserve">
+    <value>Le job actif ne dispose pas de son défini par {0}.</value>
+    <comment>The active job does not have its USER defined.</comment>
+  </data>
+  <data name="UpdateAvailablePlotBoundaries_oTreeNode_ToolTipText" xml:space="preserve">
+    <value>Complot nommé existe déjà! Renommer ou Supprimer parcelle existante nommée à recréer.</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_AutoInsertFormations" xml:space="preserve">
+    <value>Formations Insertion automatique</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_FitBoundary" xml:space="preserve">
+    <value>Limites de la placette</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_Formations" xml:space="preserve">
+    <value>Formations</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_Legend" xml:space="preserve">
+    <value>Légende</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_LegendOverrides" xml:space="preserve">
+    <value>Dérogations Légende</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_MapFrame" xml:space="preserve">
+    <value>Plan Cadre</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_MapScale" xml:space="preserve">
+    <value>Échelle de la carte</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_PaperOrientation" xml:space="preserve">
+    <value>Orientation</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_PaperSize" xml:space="preserve">
+    <value>Taille</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_PlotBoundaryInfo" xml:space="preserve">
+    <value>Infos du Graphe</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_StyleSubstitutions" xml:space="preserve">
+    <value>Les Substitutions de Style</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="SetStatusBarText_UpdateAvailablePlotBoundaries" xml:space="preserve">
+    <value>Mise à jour de limites des parcelles disponibles</value>
+  </data>
+  <data name="SetStatusBarText_UpdateAvailablePlotBoundaries_Adding" xml:space="preserve">
+    <value>Ajoutant "{0}"</value>
+  </data>
+  <data name="SetStatusBarText_UpdateAvailablePlotBoundaries_LocatingFormations" xml:space="preserve">
+    <value>La recherche de formations</value>
+  </data>
+  <data name="UpdatePlotBoundaryInfo_ForceMapBackgroundToWhite" xml:space="preserve">
+    <value>Map Background White</value>
+  </data>
+  <data name="DataGridViewAttributes1_ForceMapBackgroundToWhite" xml:space="preserve">
+    <value>Map Background White</value>
+  </data>
+</root>

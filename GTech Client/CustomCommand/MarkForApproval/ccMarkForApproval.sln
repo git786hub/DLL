@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ccMarkForApproval", "ccMarkForApproval\ccMarkForApproval.csproj", "{0429D4C7-B650-42DF-A1F6-E288B039C7B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobManager", "..\..\Common\JobManager\JobManager\JobManager.csproj", "{ACDA487A-D5F7-42FA-91DF-78DC3365C2C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomWriteBackLibrary", "..\..\Common\CustomWriteBackLibrary\CustomWriteBackLibrary\CustomWriteBackLibrary.csproj", "{A8A73252-40B1-4B7D-B921-BC10E01DA237}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationRuleOverrides", "..\..\Common\ValidationRuleOverrides\ValidationRuleOverrides\ValidationRuleOverrides.csproj", "{99A126A5-0962-4C0F-90EE-819D0A884489}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendXmlWebMessage", "..\..\Common\SendXmlWebMessage\SendXmlWebMessage\SendXmlWebMessage.csproj", "{7BA97FEA-F60A-422B-A2C7-E325EFF9448C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonMapPrintingHelper", "..\..\Common\CommonMapPrintingHelper\CommonMapPrintingHelper.csproj", "{698DA4A7-F23E-497D-800F-42B16D373C6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttachWRDocument", "..\..\Common\AttachWRDocument\AttachWRDocument\AttachWRDocument.csproj", "{FD40BDC1-F7F4-4EE1-AAA0-AABE8345A530}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0429D4C7-B650-42DF-A1F6-E288B039C7B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0429D4C7-B650-42DF-A1F6-E288B039C7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0429D4C7-B650-42DF-A1F6-E288B039C7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0429D4C7-B650-42DF-A1F6-E288B039C7B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACDA487A-D5F7-42FA-91DF-78DC3365C2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACDA487A-D5F7-42FA-91DF-78DC3365C2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACDA487A-D5F7-42FA-91DF-78DC3365C2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACDA487A-D5F7-42FA-91DF-78DC3365C2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8A73252-40B1-4B7D-B921-BC10E01DA237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A73252-40B1-4B7D-B921-BC10E01DA237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A73252-40B1-4B7D-B921-BC10E01DA237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A73252-40B1-4B7D-B921-BC10E01DA237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99A126A5-0962-4C0F-90EE-819D0A884489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99A126A5-0962-4C0F-90EE-819D0A884489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99A126A5-0962-4C0F-90EE-819D0A884489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99A126A5-0962-4C0F-90EE-819D0A884489}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BA97FEA-F60A-422B-A2C7-E325EFF9448C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BA97FEA-F60A-422B-A2C7-E325EFF9448C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BA97FEA-F60A-422B-A2C7-E325EFF9448C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BA97FEA-F60A-422B-A2C7-E325EFF9448C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{698DA4A7-F23E-497D-800F-42B16D373C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{698DA4A7-F23E-497D-800F-42B16D373C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{698DA4A7-F23E-497D-800F-42B16D373C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{698DA4A7-F23E-497D-800F-42B16D373C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD40BDC1-F7F4-4EE1-AAA0-AABE8345A530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD40BDC1-F7F4-4EE1-AAA0-AABE8345A530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD40BDC1-F7F4-4EE1-AAA0-AABE8345A530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD40BDC1-F7F4-4EE1-AAA0-AABE8345A530}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {328D171D-0BC5-4306-8B62-168C13FBF354}
+	EndGlobalSection
+EndGlobal
